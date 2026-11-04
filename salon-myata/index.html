@@ -1,5 +1,11 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ДЕМО: закрыто от поисковиков. После оплаты удалите следующую строку -->
+<meta name="robots" content="noindex, nofollow">
 <title>Студия «Мята»</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;700&display=swap">
 <!--
@@ -9,6 +15,7 @@
   2) услуги и цены в разделе «Услуги»
   3) мастеров и отзывы (берите с карточки на Яндекс Картах)
   4) цвет: поменяйте --accent в блоке :root ниже
+  5) в демо-плашке впишите название бизнеса; после оплаты удалите плашку и строку noindex
 -->
 <style>
 /* Layout: одна колонка, крупный вход с рейтингом, прайс-лист как настоящий прайс салона, запись внизу */
@@ -79,6 +86,28 @@ input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px sol
 .site-foot{padding-block:2rem;color:var(--muted);font-size:.85rem}
 .site-foot .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 </style>
+<style>
+/* ДЕМО-ПЛАШКА: после оплаты удалите этот блок стилей и блок <div class="demo"> */
+.demo{background:var(--ink);color:var(--bg);font-size:.88rem;line-height:1.45}
+.demo .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1rem;padding-block:.65rem}
+.demo p{margin:0;min-width:0}
+.demo .num{font-weight:700;font-variant-numeric:tabular-nums;user-select:all;white-space:nowrap}
+.demo .links{display:flex;gap:.5rem;flex-wrap:wrap}
+.demo a{display:inline-flex;align-items:center;border-radius:999px;padding:.35rem .9rem;font-weight:700;text-decoration:none;border:1.5px solid var(--bg);color:var(--bg)}
+.demo a:hover,.demo a:focus-visible{background:var(--bg);color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="demo" role="note">
+  <div class="wrap">
+    <p>Демо-версия сайта для «Мята». Подготовила Татьяна Кайль-Панарат · MAX и WhatsApp: <span class="num">+7 981 981-28-15</span></p>
+    <div class="links">
+      <a href="https://max.ru/u/f9LHodD0cOL_1CkPtzJaEQ5YA1wktkU90Z6QkDGbVbUujKQKHuYsoUjRCAA" target="_blank" rel="noopener">Написать в MAX</a>
+      <a href="https://wa.me/79819812815" target="_blank" rel="noopener">Написать в WhatsApp</a>
+    </div>
+  </div>
+</div>
+
 
 <header>
   <div class="wrap">
@@ -205,3 +234,6 @@ document.getElementById('f').addEventListener('submit',function(e){
   this.hidden=true;document.getElementById('ok').hidden=false;
 });
 </script>
+
+</body>
+</html>
