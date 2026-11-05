@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Демонтаж и вывоз мусора — «Чистый объект» (пример сайта)</title>
+<meta name="description" content="Демонтаж под ключ и вывоз строительного, бытового и крупногабаритного мусора. Выезд и оценка бесплатно, работаем без выходных.">
+<meta property="og:title" content="Демонтаж и вывоз мусора — «Чистый объект»">
+<meta property="og:description" content="Демонтаж под ключ и вывоз мусора. Бесплатная оценка, фиксированная цена.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f26a1b'/%3E%3Cpath d='M8 22h16M11 22V12l5-3 5 3v10' stroke='white' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Manrope:wght@400;500;700&display=swap">
+<style>
+:root{
+  --bg:#f4f2ee; --surface:#ffffff; --ink:#1d1f22; --muted:#5d6168; --line:#e1ddd5;
+  --accent:#f26a1b; --accent-ink:#ffffff; --accent-soft:#fde6d6; --dark:#1f2226; --dark-ink:#f4f2ee;
+  --display:"Unbounded","Arial Black",system-ui,sans-serif;
+  --body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#141618; --surface:#1d2024; --ink:#ecebe7; --muted:#a3a7ad; --line:#2d3136;
+  --accent:#ff7d33; --accent-ink:#141618; --accent-soft:#3a2516; --dark:#0d0e10; --dark-ink:#ecebe7; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#141618; --surface:#1d2024; --ink:#ecebe7; --muted:#a3a7ad; --line:#2d3136;
+  --accent:#ff7d33; --accent-ink:#141618; --accent-soft:#3a2516; --dark:#0d0e10; --dark-ink:#ecebe7; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.4rem,3.4vw,2rem);margin-bottom:1.4rem}
+section{padding-block:56px}
+a{color:inherit}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--accent);color:var(--accent-ink);font:inherit;font-weight:700;text-decoration:none;border:0;border-radius:12px;padding:.9rem 1.5rem;cursor:pointer}
+.btn.ghost{background:transparent;color:inherit;border:2px solid currentColor}
+.demo{background:var(--accent-soft);font-size:.88rem;text-align:center;padding:8px 16px}
+.demo a{font-weight:700}
+header{position:sticky;top:0;z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px;flex-wrap:wrap}
+.logo{font-family:var(--display);font-weight:800;font-size:1.05rem;display:flex;align-items:center;gap:10px}
+.logo i{width:30px;height:30px;border-radius:8px;background:var(--accent);display:inline-block}
+.head-r{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.tel{font-weight:700;text-decoration:none;font-size:1.05rem}
+.hero{background:var(--dark);color:var(--dark-ink);padding-block:64px}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(1.8rem,5vw,3rem)}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.1rem;opacity:.85;max-width:34em}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.hero ul{list-style:none;padding:0;margin:24px 0 0;display:flex;gap:18px;flex-wrap:wrap;font-size:.95rem;opacity:.9}
+.hero ul li::before{content:"✓ ";color:var(--accent);font-weight:700}
+.ph{border-radius:16px;background:repeating-linear-gradient(135deg,#2a2e33 0 14px,#24282c 14px 28px);aspect-ratio:4/3;max-width:100%;display:flex;align-items:flex-end;padding:14px;color:#c9ccd1;font-size:.85rem;border:2px dashed #4a4f56}
+.grid{display:grid;gap:16px}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;min-width:0}
+.card h3{font-size:1.05rem;margin-bottom:8px}
+.price{font-weight:700;color:var(--accent);margin-top:10px}
+.muted{color:var(--muted)}
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ba .ph{aspect-ratio:1;background:repeating-linear-gradient(135deg,var(--line) 0 12px,var(--surface) 12px 24px);color:var(--muted);border-color:var(--line)}
+.steps{counter-reset:s;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.step{counter-increment:s;background:var(--surface);border-radius:16px;padding:20px;border:1px solid var(--line)}
+.step::before{content:counter(s);font-family:var(--display);font-weight:800;color:var(--accent);font-size:1.6rem;display:block}
+.adv{background:var(--accent-soft)}
+.rev .card p{margin:0 0 10px}
+.tag{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.form-wrap{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+form{display:grid;gap:12px}
+input,select,textarea{font:inherit;padding:.8rem 1rem;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+.err{color:#d23b2c;font-size:.85rem;min-height:1.2em}
+.consent{font-size:.85rem;display:flex;gap:8px;align-items:flex-start}
+.consent input{width:auto;margin-top:4px}
+.hp{position:absolute;left:-9999px}
+.map{border-radius:16px;min-height:220px;background:repeating-linear-gradient(0deg,var(--line) 0 1px,transparent 1px 32px),repeating-linear-gradient(90deg,var(--line) 0 1px,transparent 1px 32px),var(--surface);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--muted);text-align:center;padding:16px}
+footer{background:var(--dark);color:var(--dark-ink);padding-block:28px;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;opacity:.85}
+.fab{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:9;display:none;width:60px;height:60px;border-radius:50%;background:var(--accent);color:var(--accent-ink);align-items:center;justify-content:center;font-size:1.6rem;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+@media (max-width:760px){
+  .hero .wrap,.form-wrap{grid-template-columns:1fr}
+  .fab{display:flex}
+  .head-r .btn{display:none}
+}
+</style>
+</head>
+<body>
+<div class="demo">Пример сайта. Компания «Чистый объект» вымышленная, телефон и отзывы — для примера. Сделано: <a href="../">Татьяна Кайль-Панарат</a></div>
+
+<header><div class="wrap">
+  <div class="logo"><i></i>Чистый объект</div>
+  <div class="head-r">
+    <a class="tel" href="tel:+70000000000">+7 (000) 000-00-00</a>
+    <a class="btn" href="tel:+70000000000">Позвонить</a>
+  </div>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <h1>Демонтаж и вывоз мусора <span>за 1 день</span></h1>
+    <p>Снесём стены, полы, сантехнику и старую отделку. Вывезем строительный, бытовой и крупногабаритный мусор. Цену называем после бесплатного осмотра — и она не меняется.</p>
+    <div class="cta">
+      <a class="btn" href="#zayavka">Рассчитать стоимость</a>
+      <a class="btn ghost" href="tel:+70000000000">Позвонить</a>
+    </div>
+    <ul><li>Выезд на оценку бесплатно</li><li>Без выходных</li><li>Договор и чеки</li></ul>
+  </div>
+  <div class="ph">Здесь фото ваших работ</div>
+</div></section>
+
+<section id="uslugi"><div class="wrap">
+  <h2>Услуги</h2>
+  <div class="grid g3">
+    <div class="card"><h3>Демонтаж</h3><p class="muted">Перегородки, стяжка, плитка, полы, потолки, окна, двери, сантехника.</p><div class="price">от 350 ₽/м²</div></div>
+    <div class="card"><h3>Демонтаж под ключ</h3><p class="muted">Квартира или офис «до бетона»: разбираем, выносим, убираем за собой.</p><div class="price">от 25 000 ₽</div></div>
+    <div class="card"><h3>Вывоз мусора</h3><p class="muted">Строительный, бытовой, крупногабаритный. Грузчики, машины от 1,5 до 20 т.</p><div class="price">от 3 500 ₽/рейс</div></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Примеры работ: до и после</h2>
+  <div class="grid g3">
+    <div class="card"><div class="ba"><div class="ph">До</div><div class="ph">После</div></div><p class="muted" style="margin:10px 0 0">Квартира 54 м², демонтаж до бетона — 2 дня</p></div>
+    <div class="card"><div class="ba"><div class="ph">До</div><div class="ph">После</div></div><p class="muted" style="margin:10px 0 0">Ванная, снос плитки и сантехники — 1 день</p></div>
+    <div class="card"><div class="ba"><div class="ph">До</div><div class="ph">После</div></div><p class="muted" style="margin:10px 0 0">Вывоз мусора после ремонта, 2 машины</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Как мы работаем</h2>
+  <div class="steps">
+    <div class="step"><b>Заявка</b><br><span class="muted">Звонок, мессенджер или форма на сайте</span></div>
+    <div class="step"><b>Бесплатный осмотр</b><br><span class="muted">Приезжаем в удобное время или считаем по фото</span></div>
+    <div class="step"><b>Договор</b><br><span class="muted">Фиксируем цену и сроки</span></div>
+    <div class="step"><b>Работа</b><br><span class="muted">Демонтаж, вынос, погрузка</span></div>
+    <div class="step"><b>Чистый объект</b><br><span class="muted">Убираем за собой и вывозим мусор</span></div>
+  </div>
+</div></section>
+
+<section class="adv"><div class="wrap">
+  <h2>Почему выбирают нас</h2>
+  <div class="grid g3">
+    <div class="card"><h3>Цена не растёт</h3><p class="muted">Что записали в договоре — столько и платите.</p></div>
+    <div class="card"><h3>Своя техника</h3><p class="muted">Машины и грузчики без посредников.</p></div>
+    <div class="card"><h3>Аккуратно с соседями</h3><p class="muted">Соблюдаем тихие часы, защищаем лифт и подъезд.</p></div>
+    <div class="card"><h3>Законный вывоз</h3><p class="muted">Мусор едет на полигон, а не в ближайший лес.</p></div>
+    <div class="card"><h3>Быстро</h3><p class="muted">Выезд в день обращения, квартира — за 1–2 дня.</p></div>
+    <div class="card"><h3>Оплата после</h3><p class="muted">Наличными, картой или по счёту для юрлиц.</p></div>
+  </div>
+</div></section>
+
+<section class="rev"><div class="wrap">
+  <h2>Отзывы</h2>
+  <div class="grid g3">
+    <div class="card"><div class="tag">пример отзыва</div><p>Снесли перегородки и плитку в двушке за два дня, мусор вывезли сразу. Цена совпала с той, что назвали на осмотре.</p><b>Андрей</b></div>
+    <div class="card"><div class="tag">пример отзыва</div><p>Нужно было срочно освободить офис от старой мебели. Приехали в тот же день, всё вынесли за 3 часа.</p><b>Марина</b></div>
+    <div class="card"><div class="tag">пример отзыва</div><p>Защитили лифт плёнкой, соседи не жаловались. Рекомендую.</p><b>Игорь</b></div>
+  </div>
+</div></section>
+
+<section id="zayavka"><div class="wrap">
+  <h2>Рассчитаем стоимость за 15 минут</h2>
+  <div class="form-wrap">
+    <form id="f" novalidate>
+      <input name="name" placeholder="Ваше имя" autocomplete="name">
+      <input name="phone" placeholder="Телефон*" inputmode="tel" autocomplete="tel">
+      <select name="service"><option>Демонтаж</option><option>Демонтаж под ключ</option><option>Вывоз мусора</option></select>
+      <textarea name="msg" rows="3" placeholder="Что нужно сделать? Площадь, этаж, есть ли лифт"></textarea>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label class="consent"><input type="checkbox" name="ok"> <span>Согласен на обработку персональных данных и с <a href="../privacy/">политикой конфиденциальности</a></span></label>
+      <div class="err" id="err"></div>
+      <button class="btn" type="submit">Получить расчёт</button>
+    </form>
+    <div class="grid">
+      <div class="card">
+        <p style="margin:0 0 6px"><b>Телефон:</b> <a href="tel:+70000000000">+7 (000) 000-00-00</a></p>
+        <p style="margin:0 0 6px"><b>Telegram / WhatsApp:</b> @primer</p>
+        <p style="margin:0"><b>Работаем:</b> ежедневно 8:00–21:00</p>
+      </div>
+      <div class="map">Здесь будет Яндекс Карта с вашим адресом или зоной выезда</div>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <span>© «Чистый объект», 2026</span>
+  <a href="../privacy/">Политика конфиденциальности</a>
+</div></footer>
+
+<a class="fab" href="tel:+70000000000" aria-label="Позвонить">📞</a>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=e.target, err=document.getElementById('err');
+  if(f.website.value){return;}
+  var digits=f.phone.value.replace(/\D/g,'');
+  if(digits.length<10){err.textContent='Укажите телефон, чтобы мы перезвонили';return;}
+  if(!f.ok.checked){err.textContent='Отметьте согласие на обработку данных';return;}
+  err.style.color='inherit';
+  err.textContent='Это пример сайта: на настоящем сайте заявка сразу придёт вам в Telegram и на почту.';
+});
+</script>
+</body>
+</html>
