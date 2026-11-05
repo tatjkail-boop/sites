@@ -34,6 +34,8 @@ a{color:inherit}
 header.top{padding-block:1rem}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .name{font-family:var(--display);font-weight:700;font-size:1rem;letter-spacing:.01em;text-decoration:none}
+.name{display:flex;align-items:center;gap:.7rem}
+.ava{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:50% 25%;flex:none}
 .name small{display:block;font-family:var(--body);font-weight:500;font-size:.8rem;color:var(--muted);letter-spacing:0}
 .chips{display:flex;gap:.5rem;flex-wrap:wrap}
 .chip{border:1.5px solid var(--line);border-radius:999px;padding:.4rem .9rem;font-weight:700;font-size:.9rem;text-decoration:none;background:var(--surface)}
@@ -83,6 +85,9 @@ section{padding-block:clamp(2.5rem,6vw,4.5rem)}
 
 .about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem;align-items:start}
 .about p{margin:0 0 1rem}
+.me{float:left;width:min(38%,180px);height:auto;aspect-ratio:367/554;object-fit:cover;border-radius:20px;margin:0 1.4rem .8rem 0;max-width:100%}
+.me-text::after{content:"";display:block;clear:both}
+@media (max-width:480px){.me{float:none;display:block;width:min(100%,220px);margin:0 0 1.2rem}}
 .tools{display:flex;flex-wrap:wrap;gap:.5rem}
 .tools.niches span{font-size:1rem;padding:.5rem 1rem}
 .tools span{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.3rem .8rem;font-size:.9rem}
@@ -112,7 +117,7 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
 
 <header class="top">
   <div class="wrap">
-    <a class="name" href="#">Татьяна Кайль-Панарат<small>Сайты и реклама в Яндексе</small></a>
+    <a class="name" href="#"><img class="ava" src="tatiana.jpg" alt=""><span>Татьяна Кайль-Панарат<small>Сайты и реклама в Яндексе</small></span></a>
     <div class="chips">
       <a class="chip" href="https://max.ru/u/f9LHodD0cOL_1CkPtzJaEQ5YA1wktkU90Z6QkDGbVbUujKQKHuYsoUjRCAA" target="_blank" rel="noopener">MAX</a>
       <a class="chip" href="https://wa.me/79819812815" target="_blank" rel="noopener">WhatsApp</a>
@@ -215,7 +220,8 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
 
   <section>
     <div class="wrap about">
-      <div>
+      <div class="me-text">
+        <img class="me" src="tatiana.jpg" alt="Татьяна Кайль-Панарат" width="367" height="554">
         <h2>Обо мне</h2>
         <p>Я Татьяна, специалист по контекстной рекламе и сайтам. Работаю онлайн с малым бизнесом по всей России.</p>
         <p>Смотрю на сайт глазами рекламщика: сайт должен не просто красиво выглядеть, а превращать посетителей в записи. Поэтому делаю коротко, по делу и с кнопкой записи на каждом шаге.</p>
