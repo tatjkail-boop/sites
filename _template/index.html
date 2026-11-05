@@ -66,8 +66,7 @@ section{padding-block:clamp(2.5rem,6vw,4.5rem)}
 .price li .dots{flex:1}
 .price li strong{font-variant-numeric:tabular-nums;white-space:nowrap}
 .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:1rem}
-.ph{aspect-ratio:4/5;max-width:100%;border-radius:18px;display:flex;align-items:flex-end;padding:1rem;color:var(--ink);font-weight:500;font-size:.9rem;
-  background:linear-gradient(160deg,var(--accent-soft),var(--surface));border:1px solid var(--line)}
+.ph{display:block;width:100%;aspect-ratio:4/5;max-width:100%;object-fit:cover;border-radius:18px;background:var(--accent-soft)}
 .masters{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1.5rem}
 .master{display:flex;gap:1rem;align-items:center}
 .ava{flex:none;width:64px;height:64px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-family:var(--display);font-weight:700}
@@ -171,10 +170,12 @@ input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px sol
       <h2>Наши работы</h2>
       <!-- Замените блоки .ph на фото из карточки клиента: <img src="foto1.jpg" alt="Маникюр"> -->
       <div class="gallery">
-        <div class="ph">Фото: маникюр</div>
-        <div class="ph">Фото: брови</div>
-        <div class="ph">Фото: окрашивание</div>
-        <div class="ph">Фото: интерьер</div>
+        <img class="ph" src="https://images.unsplash.com/photo-1610992015762-45dca7fa3a85?w=600&h=750&fit=crop&auto=format&q=75" alt="Нежный нюдовый маникюр" loading="lazy">
+        <img class="ph" src="https://images.unsplash.com/photo-1516220362602-dba5272034e7?w=600&h=750&fit=crop&auto=format&q=75" alt="Оформленные брови" loading="lazy">
+        <img class="ph" src="https://images.unsplash.com/photo-1614020863825-28a0bb7e3c3c?w=600&h=750&fit=crop&auto=format&q=75" alt="Окрашивание в медный оттенок" loading="lazy">
+        <img class="ph" src="https://images.unsplash.com/photo-1695527081827-fdbc4e77be9b?w=600&h=750&fit=crop&auto=format&q=75" alt="Интерьер студии" loading="lazy">
+      </div>
+      <p class="note">Фото для примера — Unsplash. На вашем сайте будут фото ваших работ.</p>
       </div>
     </div>
   </section>
