@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ДЕМО: закрыто от поисковиков. После оплаты удалите следующую строку и блок class="demo" -->
+<meta name="robots" content="noindex, nofollow">
+<title>Kukla Studio — ногтевая студия у метро Купчино</title>
+<meta name="description" content="Kukla Studio — ногтевая студия у метро Купчино: маникюр, гель-лак, наращивание. Ежедневно 10:00–21:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#f7f5f1;--surface:#ffffff;--ink:#1d1914;--muted:#6a6157;--accent:#8a6526;--accent-soft:#efe5d3;--line:#e3dccf;--star:#c98a1b;
+--display:"Unbounded","Arial Black",system-ui,sans-serif;--body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14120f;--surface:#1d1a16;--ink:#efe9df;--muted:#b2a796;--accent:#d8b46c;--accent-soft:#3a3020;--line:#332d24;--star:#e2a83a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14120f;--surface:#1d1a16;--ink:#efe9df;--muted:#b2a796;--accent:#d8b46c;--accent-soft:#3a3020;--line:#332d24;--star:#e2a83a;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+img{max-width:100%}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.5rem,3.5vw,2.1rem);margin-bottom:1.5rem}
+a{color:inherit}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--accent);color:var(--bg);text-decoration:none;border:0;border-radius:999px;padding:.85rem 1.6rem;font:inherit;font-weight:700;cursor:pointer}
+.btn:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+header.top{padding-block:1rem;border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:.7rem;font-family:var(--display);font-weight:700;font-size:1.15rem;text-decoration:none}
+.logo img{width:44px;height:44px;border-radius:12px;object-fit:cover;background:var(--surface);border:1px solid var(--line)}
+.phone{font-weight:700;font-variant-numeric:tabular-nums;color:inherit;text-decoration:none;white-space:nowrap}
+.phone:hover{color:var(--accent);text-decoration:underline}
+.call{display:inline-flex;align-items:center;gap:.4rem}
+.call::before{content:"\260E";font-size:.95em;color:var(--accent)}
+.hero{padding-block:clamp(2.5rem,7vw,5rem)}
+.hero h1{font-size:clamp(2rem,6.2vw,4rem);max-width:17ch}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:1.12rem;color:var(--muted);max-width:54ch;margin:1.25rem 0 2rem}
+.rating{display:inline-flex;align-items:center;gap:.6rem;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem .4rem .5rem;margin-bottom:1.5rem;font-size:.95rem;text-decoration:none}
+.rating b{background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:.15rem .6rem;font-variant-numeric:tabular-nums}
+.stars{color:var(--star);letter-spacing:.1em}
+.actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;margin-top:2rem;color:var(--muted);font-size:.95rem}
+.facts span{display:inline-flex;gap:.4rem;align-items:center}
+.facts span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+section{padding-block:clamp(2.5rem,6vw,4.5rem)}
+.price{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:2rem 3rem}
+.price h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:.75rem}
+.price ul{list-style:none;margin:0;padding:0}
+.price li{display:flex;align-items:baseline;gap:.6rem;padding-block:.6rem;border-bottom:1px dashed var(--line)}
+.price li span{min-width:0;flex:1}
+.price li small{color:var(--muted);white-space:nowrap}
+.price li strong{font-variant-numeric:tabular-nums;white-space:nowrap}
+.note{color:var(--muted);font-size:.9rem;margin-top:1rem}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:1rem}
+.gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block;background:var(--accent-soft)}
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1.25rem}
+.review{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.4rem;display:flex;flex-direction:column;gap:.75rem}
+.review p{margin:0}
+.review footer{color:var(--muted);font-size:.9rem;margin-top:auto}
+.book{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.book .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:2.5rem}
+.info dl{margin:0;display:grid;gap:1rem}
+.info dt{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.info dd{margin:0;font-weight:500}
+.soc{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.4rem}
+.soc a{border:1.5px solid var(--line);border-radius:999px;padding:.3rem .9rem;text-decoration:none;font-weight:700;font-size:.9rem}
+.soc a:hover{border-color:var(--accent);color:var(--accent)}
+form{display:grid;gap:.9rem}
+form h3{font-size:1.2rem}
+form p{margin:0;color:var(--muted);font-size:.95rem}
+label{font-size:.9rem;font-weight:500;display:grid;gap:.35rem}
+input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:.75rem .9rem;width:100%}
+.site-foot{padding-block:2rem;color:var(--muted);font-size:.85rem}
+.site-foot .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.demo{background:var(--ink);color:var(--bg);font-size:.88rem;line-height:1.45}
+.demo .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1rem;padding-block:.65rem}
+.demo p{margin:0;min-width:0}
+.demo .num{font-weight:700;font-variant-numeric:tabular-nums;user-select:all;white-space:nowrap}
+.demo .links{display:flex;gap:.5rem;flex-wrap:wrap}
+.demo a{display:inline-flex;align-items:center;border-radius:999px;padding:.35rem .9rem;font-weight:700;text-decoration:none;border:1.5px solid var(--bg);color:var(--bg)}
+.demo a:hover,.demo a:focus-visible{background:var(--bg);color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="demo" role="note">
+  <div class="wrap">
+    <p>Демо-версия сайта для «Kukla Studio». Подготовила Татьяна Кайль-Панарат · MAX и WhatsApp: <span class="num">+7 981 981-28-15</span></p>
+    <div class="links">
+      <a href="https://max.ru/u/f9LHodD0cOL_1CkPtzJaEQ5YA1wktkU90Z6QkDGbVbUujKQKHuYsoUjRCAA" target="_blank" rel="noopener">Написать в MAX</a>
+      <a href="https://wa.me/79819812815" target="_blank" rel="noopener">Написать в WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#"><img src="https://avatars.mds.yandex.net/get-altay/11187599/2a0000018b7fc1c1808f4fe122f7cd231ca1/S_height" alt="">Kukla Studio</a>
+    <a class="phone call" href="tel:+79216903303">+7 (921) 690-33-03</a>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <a class="rating" href="https://yandex.ru/maps/org/kukla_studio/125543291319/reviews/" target="_blank" rel="noopener"><b>5,0</b><span class="stars">★★★★★</span><span>202 оценки на Яндекс Картах</span></a>
+    <h1>Маникюр и наращивание <em>у метро Купчино</em></h1>
+    <p>Ногтевая студия в двух минутах от метро: маникюр, покрытие гель-лаком и наращивание. Витебский проспект, 99, корп. 1.</p>
+    <div class="actions">
+      <a class="btn" href="#book">Записаться</a>
+      <a class="btn ghost" href="#price">Смотреть цены</a>
+    </div>
+    <div class="facts"><span>Ежедневно 10:00–21:00</span><span>2 минуты от метро Купчино</span><span>Маникюр с гель-лаком — 2 200 ₽</span></div>
+  </div>
+
+  <section id="price">
+    <div class="wrap">
+      <h2>Услуги и цены</h2>
+      <div class="price"><div><h3>Маникюр</h3><ul><li><span>Маникюр без покрытия</span><strong>1 500 ₽</strong></li><li><span>Маникюр + гель-лак</span><strong>2 200 ₽</strong></li><li><span>Наращивание ногтей</span><strong>3 400 ₽</strong></li></ul></div></div>
+      <p class="note">Маникюр с покрытием «всё включено» — 2 200 ₽. Точную стоимость подскажет мастер.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Наши работы</h2>
+      <div class="gallery"><img src="https://avatars.mds.yandex.net/get-altay/10648814/2a0000018d0d06df9a74f90d26e70dda5393/XL" alt="Кабинет студии" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/14209766/2a00000193b01e417c7eb17f3b040d2d7c83/XL" alt="Длинные красные ногти" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/20192526/2a000001a06d82cb610dcea6332877f52469/XL" alt="Бордовый маникюр" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/20192526/2a000001a01b7e6fc2a190d2da8b4e6b4362/XL" alt="Нюдовый маникюр" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Что говорят клиенты</h2>
+      <div class="reviews"><article class="review"><span class="stars" aria-label="5 из 5">★★★★★</span><p>Записалась самостоятельно, без чьих-то рекомендаций и была в приятном восторге. Мастер Лола действительно профессионал — помогла определиться с цветом, подсказала классную для меня новинку. Маникюр и наращивание сделали быстро и качественно.</p><footer>Кристина М., Яндекс Карты</footer></article><article class="review"><span class="stars" aria-label="5 из 5">★★★★★</span><p>Отличная студия, прекрасный мастер! Александра буквально вернула к жизни мои ногти. Работает аккуратно, но быстро, очень хорошо работает с формой и длиной. Однозначно рекомендую 🌺</p><footer>Кристина Т., Яндекс Карты</footer></article><article class="review"><span class="stars" aria-label="5 из 5">★★★★★</span><p>Я в полном восторге, начиная от места расположения и уютной атмосферы в кабинете, заканчивая моим прекрасным мастером Александрой. Она просто волшебница ❤️ Так нежно, аккуратно, быстро и без лишних разговоров, всё как я люблю.</p><footer>Настя, Яндекс Карты</footer></article></div>
+      <p class="note"><a href="https://yandex.ru/maps/org/kukla_studio/125543291319/reviews/" target="_blank" rel="noopener">Все 202 оценки — на Яндекс Картах</a></p>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="wrap">
+      <div class="info">
+        <h2>Как нас найти</h2>
+        <dl>
+          <div><dt>Адрес</dt><dd>Витебский проспект, 99, корп. 1</dd></div>
+          <div><dt>Метро</dt><dd>Купчино — 170 м, 2 минуты пешком</dd></div>
+          <div><dt>Часы работы</dt><dd>Ежедневно, 10:00–21:00</dd></div>
+          <div><dt>Телефон</dt><dd><a class="phone call" href="tel:+79216903303">+7 (921) 690-33-03</a></dd></div>
+          <div><dt>Мы в мессенджерах</dt><dd class="soc"><a href="https://wa.me/79216903303" target="_blank" rel="noopener">WhatsApp</a><a href="https://t.me/kukla_studio_spb" target="_blank" rel="noopener">Telegram</a><a href="https://vk.com/kukla.studio" target="_blank" rel="noopener">ВКонтакте</a></dd></div>
+        </dl>
+      </div>
+      <form id="f" novalidate>
+        <h3>Запись через WhatsApp</h3>
+        <p>Заполните три поля — откроется WhatsApp с готовым сообщением администратору.</p>
+        <label for="name">Ваше имя<input id="name" name="name" placeholder="Как к вам обращаться" required></label>
+        <label for="svc">Услуга<select id="svc" name="svc"><option>Маникюр + гель-лак</option><option>Маникюр без покрытия</option><option>Наращивание ногтей</option></select></label>
+        <label for="when">Когда удобно<input id="when" name="when" placeholder="Например, суббота после 15:00"></label>
+        <button class="btn" type="submit">Записаться через WhatsApp</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap"><span>© 2026 Kukla Studio · ногтевая студия в Купчино</span><span>Фото, цены и отзывы — из карточки на Яндекс Картах</span></div>
+</footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=this.name.value.trim();
+  if(!n){this.name.focus();return;}
+  var msg='Здравствуйте! Меня зовут '+n+'. Хочу записаться: '+this.svc.value+(this.when.value.trim()?'. Удобно: '+this.when.value.trim():'')+'.';
+  window.location.href='https://wa.me/79216903303?text='+encodeURIComponent(msg);
+});
+</script>
+</body>
+</html>
