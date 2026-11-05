@@ -86,6 +86,9 @@ form{display:grid;gap:.9rem}
 label{font-size:.9rem;font-weight:500;display:grid;gap:.35rem}
 input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:.75rem .9rem;width:100%}
 .ok{background:var(--accent-soft);color:var(--accent);border-radius:12px;padding:1rem;font-weight:700}
+.consent{display:flex;gap:.6rem;align-items:flex-start;font-weight:400;font-size:.85rem;color:var(--muted)}
+.consent input{width:auto;margin-top:.25rem;accent-color:var(--accent)}
+.err{margin:0;color:#b3261e;font-size:.9rem}
 .site-foot{padding-block:2rem;color:var(--muted);font-size:.85rem}
 .site-foot .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 </style>
@@ -218,6 +221,8 @@ input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px sol
               <option>Маникюр с покрытием</option><option>Педикюр</option><option>Брови</option><option>Ресницы</option><option>Стрижка или окрашивание</option>
             </select>
           </label>
+          <label class="consent" for="agree"><input id="agree" name="agree" type="checkbox"> <span>Нажимая кнопку, я даю согласие на обработку персональных данных и соглашаюсь с <a href="../privacy/" target="_blank" rel="noopener">политикой конфиденциальности</a></span></label>
+          <p class="err" id="err" hidden>Отметьте согласие на обработку данных, чтобы отправить заявку.</p>
           <button class="btn" type="submit">Отправить заявку</button>
         </form>
         <div class="ok" id="ok" hidden>Спасибо! Администратор перезвонит в течение 15 минут, чтобы подобрать время.</div>
@@ -234,6 +239,7 @@ input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px sol
 document.getElementById('f').addEventListener('submit',function(e){
   e.preventDefault();
   if(!this.name.value.trim()||!this.tel.value.trim()){this.reportValidity();return;}
+  if(!this.agree.checked){document.getElementById('err').hidden=false;this.agree.focus();return;}
   this.hidden=true;document.getElementById('ok').hidden=false;
 });
 </script>

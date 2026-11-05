@@ -71,6 +71,9 @@ form h3{font-size:1.2rem}
 form p{margin:0;color:var(--muted);font-size:.95rem}
 label{font-size:.9rem;font-weight:500;display:grid;gap:.35rem}
 input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:.75rem .9rem;width:100%}
+.consent{display:flex;gap:.6rem;align-items:flex-start;font-weight:400;font-size:.85rem;color:var(--muted)}
+.consent input{width:auto;margin-top:.25rem;accent-color:var(--accent)}
+.err{margin:0;color:#b3261e;font-size:.9rem}
 .site-foot{padding-block:2rem;color:var(--muted);font-size:.85rem}
 .site-foot .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 .demo{background:var(--ink);color:var(--bg);font-size:.88rem;line-height:1.45}
@@ -153,6 +156,8 @@ input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px sol
         <label for="name">Ваше имя<input id="name" name="name" placeholder="Как к вам обращаться" required></label>
         <label for="svc">Услуга<select id="svc" name="svc"><option>Маникюр + гель-лак</option><option>Маникюр без покрытия</option><option>Наращивание ногтей</option></select></label>
         <label for="when">Когда удобно<input id="when" name="when" placeholder="Например, суббота после 15:00"></label>
+        <label class="consent" for="agree"><input id="agree" name="agree" type="checkbox"> <span>Нажимая кнопку, я даю согласие на обработку персональных данных и соглашаюсь с <a href="../privacy/" target="_blank" rel="noopener">политикой конфиденциальности</a></span></label>
+        <p class="err" id="err" hidden>Отметьте согласие на обработку данных, чтобы отправить заявку.</p>
         <button class="btn" type="submit">Записаться через WhatsApp</button>
       </form>
     </div>
@@ -168,6 +173,7 @@ document.getElementById('f').addEventListener('submit',function(e){
   e.preventDefault();
   var n=this.name.value.trim();
   if(!n){this.name.focus();return;}
+  if(!this.agree.checked){document.getElementById('err').hidden=false;this.agree.focus();return;}
   var msg='Здравствуйте! Меня зовут '+n+'. Хочу записаться: '+this.svc.value+(this.when.value.trim()?'. Удобно: '+this.when.value.trim():'')+'.';
   window.location.href='https://wa.me/79216903303?text='+encodeURIComponent(msg);
 });
