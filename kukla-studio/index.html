@@ -88,7 +88,7 @@ input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px sol
 <body>
 <div class="demo" role="note">
   <div class="wrap">
-    <p>Демо-версия сайта для «Kukla Studio». Подготовила Татьяна Кайль-Панарат · MAX и WhatsApp: <span class="num">+7 981 981-28-15</span></p>
+    <p>Демо-версия сайта для «Kukla Studio» · доступна до 19.11. Подготовила Татьяна Кайль-Панарат · MAX и WhatsApp: <span class="num">+7 981 981-28-15</span></p>
     <div class="links">
       <a href="https://max.ru/u/f9LHodD0cOL_1CkPtzJaEQ5YA1wktkU90Z6QkDGbVbUujKQKHuYsoUjRCAA" target="_blank" rel="noopener">Написать в MAX</a>
       <a href="https://wa.me/79819812815" target="_blank" rel="noopener">Написать в WhatsApp</a>
@@ -177,6 +177,11 @@ document.getElementById('f').addEventListener('submit',function(e){
   var msg='Здравствуйте! Меня зовут '+n+'. Хочу записаться: '+this.svc.value+(this.when.value.trim()?'. Удобно: '+this.when.value.trim():'')+'.';
   window.location.href='https://wa.me/79216903303?text='+encodeURIComponent(msg);
 });
+</script>
+<script>
+(function(){if(Date.now()<=Date.parse('2026-11-19T23:59:59+03:00'))return;
+document.title='Демо-версия больше недоступна';
+document.body.innerHTML='<main style="min-height:100vh;display:grid;place-items:center;padding:24px;font-family:system-ui,sans-serif;background:#f5f4fb;color:#17142b;text-align:center"><div style="max-width:440px"><h1 style="font-size:1.5rem;margin:0 0 .8rem">Демо-версия сайта больше недоступна</h1><p style="color:#5f5b78;line-height:1.6;margin:0 0 1.5rem">Этот пример сайта для «Kukla Studio» хранился 14 дней. Хотите его вернуть или запустить по-настоящему — напишите Татьяне Кайль-Панарат: +7 981 981-28-15.</p><p style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin:0"><a href="https://wa.me/79819812815" style="background:#5338e8;color:#fff;padding:.8rem 1.3rem;border-radius:12px;text-decoration:none;font-weight:700">WhatsApp</a><a href="https://max.ru/u/f9LHodD0cOL_1CkPtzJaEQ5YA1wktkU90Z6QkDGbVbUujKQKHuYsoUjRCAA" style="border:1.5px solid #5338e8;color:#5338e8;padding:.8rem 1.3rem;border-radius:12px;text-decoration:none;font-weight:700">MAX</a></p></div></main>';})();
 </script>
 </body>
 </html>
