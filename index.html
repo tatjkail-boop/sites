@@ -48,10 +48,10 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .actions{display:flex;gap:.75rem;flex-wrap:wrap}
 .note{font-size:.9rem;color:var(--muted);margin-top:1rem}
 
-.phone{position:relative;justify-self:center;width:min(100%,300px);aspect-ratio:9/18.5;border-radius:42px;background:#0d0b16;padding:12px;box-shadow:0 30px 60px -25px rgba(30,20,90,.45)}
-.phone::before{content:"";position:absolute;top:20px;left:50%;transform:translateX(-50%);width:84px;height:20px;border-radius:999px;background:#0d0b16;z-index:2}
-.screen{width:100%;height:100%;border-radius:31px;overflow:hidden;background:#fff}
-.phone iframe{width:375px;border:0;background:#fff;display:block;transform-origin:0 0}
+.phone{position:relative;justify-self:center;width:min(100%,290px);aspect-ratio:9/17.5;border-radius:40px;background:#0d0b16;padding:30px 10px 14px;box-shadow:0 30px 60px -25px rgba(30,20,90,.45)}
+.phone::before{content:"";position:absolute;top:11px;left:50%;transform:translateX(-50%);width:64px;height:10px;border-radius:999px;background:#2a2638;z-index:2}
+.screen{width:100%;height:100%;border-radius:22px;overflow:hidden;background:#fff;position:relative}
+.phone iframe{position:absolute;top:0;left:0;width:392px;border:0;background:#fff;display:block;transform-origin:0 0}
 .phone-cap{text-align:center;font-size:.85rem;color:var(--muted);margin-top:.9rem}
 .phone-col{display:flex;flex-direction:column;align-items:center}
 
@@ -259,8 +259,9 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
 </footer>
 <script>
 (function(){var sc=document.querySelector('.screen'),f=sc&&sc.querySelector('iframe');if(!f)return;
-function fit(){var k=sc.clientWidth/375;f.style.transform='scale('+k+')';f.style.height=(sc.clientHeight/k)+'px';}
-fit();window.addEventListener('resize',fit);})();
+function fit(){var w=sc.clientWidth,h=sc.clientHeight;if(!w||!h)return;var k=w/375;f.style.transform='scale('+k+')';f.style.height=Math.ceil(h/k)+'px';}
+fit();window.addEventListener('load',fit);window.addEventListener('resize',fit);
+if(window.ResizeObserver){new ResizeObserver(fit).observe(sc);}})();
 </script>
 </body>
 </html>
