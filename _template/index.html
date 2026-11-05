@@ -11,7 +11,7 @@
 <!--
   ШАБЛОН САЙТА ДЛЯ САЛОНА КРАСОТЫ
   Чтобы сделать сайт для нового клиента, замените:
-  1) название, телефон, адрес, часы работы (поиск по «Мята», «+7 (900)», «79001234567», «Садовая»)
+  1) название, телефон, адрес, часы работы (поиск по «Мята», «+7 (000)», «Садовая»; телефон оберните в <a href="tel:+7...">)
   2) услуги и цены в разделе «Услуги»
   3) мастеров и отзывы (берите с карточки на Яндекс Картах)
   4) цвет: поменяйте --accent в блоке :root ниже
@@ -103,7 +103,7 @@ input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px sol
 <body>
 <div class="demo" role="note">
   <div class="wrap">
-    <p>Демо-версия сайта для «Мята». Подготовила Татьяна Кайль-Панарат · MAX и WhatsApp: <span class="num">+7 981 981-28-15</span></p>
+    <p>Пример сайта: салон «Мята» вымышленный, все данные — для образца. Подготовила Татьяна Кайль-Панарат · MAX и WhatsApp: <span class="num">+7 981 981-28-15</span></p>
     <div class="links">
       <a href="https://max.ru/u/f9LHodD0cOL_1CkPtzJaEQ5YA1wktkU90Z6QkDGbVbUujKQKHuYsoUjRCAA" target="_blank" rel="noopener">Написать в MAX</a>
       <a href="https://wa.me/79819812815" target="_blank" rel="noopener">Написать в WhatsApp</a>
@@ -115,13 +115,13 @@ input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px sol
 <header>
   <div class="wrap">
     <div class="logo">Мята<span>.</span></div>
-    <a class="phone call" href="tel:+79001234567">+7 (900) 123-45-67</a>
+    <span class="phone call">+7 (000) 000-00-00</span>
   </div>
 </header>
 
 <main>
   <div class="hero wrap">
-    <div class="rating"><b>4,9</b><span class="stars">★★★★★</span><span>127 отзывов на Яндекс Картах</span></div>
+    <div class="rating"><b>4,9</b><span class="stars">★★★★★</span><span>Здесь будет ваш рейтинг с Яндекс Карт</span></div>
     <h1>Маникюр, брови и волосы <em>у дома</em></h1>
     <p>Студия красоты на Садовой, 14. Пять мастеров, стерильные инструменты и запись без ожидания — даже на сегодня.</p>
     <div class="actions">
@@ -191,11 +191,11 @@ input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px sol
     <div class="wrap">
       <h2>Что говорят клиенты</h2>
       <div class="reviews">
-        <article class="review"><span class="stars">★★★★★</span><p>Хожу к Анне на маникюр уже год. Покрытие держится три недели, и всегда можно записаться в удобное время.</p><footer>Ольга, Яндекс Карты</footer></article>
-        <article class="review"><span class="stars">★★★★★</span><p>Сделали ламинирование бровей быстро и аккуратно. Уютно, чисто, угостили кофе.</p><footer>Кристина, Яндекс Карты</footer></article>
-        <article class="review"><span class="stars">★★★★★</span><p>Марина подобрала цвет именно такой, как я хотела. Наконец нашла своего мастера рядом с домом.</p><footer>Светлана, Яндекс Карты</footer></article>
+        <article class="review"><span class="stars">★★★★★</span><p>Хожу к Анне на маникюр уже год. Покрытие держится три недели, и всегда можно записаться в удобное время.</p><footer>Ольга · пример отзыва</footer></article>
+        <article class="review"><span class="stars">★★★★★</span><p>Сделали ламинирование бровей быстро и аккуратно. Уютно, чисто, угостили кофе.</p><footer>Кристина · пример отзыва</footer></article>
+        <article class="review"><span class="stars">★★★★★</span><p>Марина подобрала цвет именно такой, как я хотела. Наконец нашла своего мастера рядом с домом.</p><footer>Светлана · пример отзыва</footer></article>
       </div>
-      <p class="note">Все 127 отзывов — в карточке салона на Яндекс Картах.</p>
+      <p class="note">На вашем сайте здесь будут настоящие отзывы из карточки на Яндекс Картах.</p>
     </div>
   </section>
 
@@ -206,7 +206,7 @@ input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px sol
         <dl>
           <div><dt>Адрес</dt><dd>ул. Садовая, 14, вход со двора</dd></div>
           <div><dt>Часы работы</dt><dd>Ежедневно, 9:00–21:00</dd></div>
-          <div><dt>Телефон и WhatsApp</dt><dd><a class="phone call" href="tel:+79001234567">+7 (900) 123-45-67</a></dd></div>
+          <div><dt>Телефон и WhatsApp</dt><dd><span class="phone call">+7 (000) 000-00-00</span></dd></div>
         </dl>
       </div>
       <div>
