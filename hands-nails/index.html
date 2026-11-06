@@ -84,6 +84,10 @@ input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px sol
 .demo a{display:inline-flex;align-items:center;border-radius:999px;padding:.35rem .9rem;font-weight:700;text-decoration:none;border:1.5px solid var(--bg);color:var(--bg)}
 .demo a:hover,.demo a:focus-visible{background:var(--bg);color:var(--ink)}
 </style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=114105889','ym');ym(114105889,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114105889" style="position:absolute;left:-9999px;" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 <div class="demo" role="note">
@@ -183,5 +187,12 @@ document.getElementById('f').addEventListener('submit',function(e){
 document.title='Демо-версия больше недоступна';
 document.body.innerHTML='<main style="min-height:100vh;display:grid;place-items:center;padding:24px;font-family:system-ui,sans-serif;background:#f5f4fb;color:#17142b;text-align:center"><div style="max-width:440px"><h1 style="font-size:1.5rem;margin:0 0 .8rem">Демо-версия сайта больше недоступна</h1><p style="color:#5f5b78;line-height:1.6;margin:0 0 1.5rem">Этот пример сайта для «Hands &amp; Nails» хранился 14 дней. Хотите его вернуть или запустить по-настоящему — напишите Татьяне Кайль-Панарат: +7 981 981-28-15.</p><p style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin:0"><a href="https://wa.me/79819812815" style="background:#5338e8;color:#fff;padding:.8rem 1.3rem;border-radius:12px;text-decoration:none;font-weight:700">WhatsApp</a><a href="https://max.ru/u/f9LHodD0cOL_1CkPtzJaEQ5YA1wktkU90Z6QkDGbVbUujKQKHuYsoUjRCAA" style="border:1.5px solid #5338e8;color:#5338e8;padding:.8rem 1.3rem;border-radius:12px;text-decoration:none;font-weight:700">MAX</a></p></div></main>';})();
 </script>
+<!-- cookie-notice -->
+<div id="ck" style="display:none;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:9999;max-width:560px;margin:0 auto;background:#1d1d1b;color:#fff;border-radius:14px;padding:12px 14px;font:14px/1.45 system-ui,-apple-system,'Segoe UI',sans-serif;box-shadow:0 8px 28px rgba(0,0,0,.25);align-items:center;gap:12px">
+<span style="flex:1">Сайт использует cookies и Яндекс Метрику для статистики посещений. <a href="../politika/" style="color:#ffd84d">Подробнее</a></span>
+<button type="button" onclick="try{localStorage.setItem('ck','1')}catch(e){};document.getElementById('ck').style.display='none'" style="font:inherit;font-weight:700;border:0;border-radius:10px;padding:8px 14px;background:#ffd84d;color:#1d1d1b;cursor:pointer">Понятно</button>
+</div>
+<script>try{if(!localStorage.getItem('ck'))document.getElementById('ck').style.display='flex'}catch(e){document.getElementById('ck').style.display='flex'}</script>
+<!-- /cookie-notice -->
 </body>
 </html>
