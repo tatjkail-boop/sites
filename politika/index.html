@@ -64,7 +64,7 @@ a{color:var(--accent)}
 <span style="flex:1">Сайт использует cookies и Яндекс Метрику для статистики посещений. <a href="../politika/" style="color:#ffd84d">Подробнее</a></span>
 <button type="button" onclick="try{localStorage.setItem('ck','1')}catch(e){};document.getElementById('ck').style.display='none'" style="font:inherit;font-weight:700;border:0;border-radius:10px;padding:8px 14px;background:#ffd84d;color:#1d1d1b;cursor:pointer">Понятно</button>
 </div>
-<script>try{if(!localStorage.getItem('ck'))document.getElementById('ck').style.display='flex'}catch(e){document.getElementById('ck').style.display='flex'}</script>
+<script>try{if(window.self===window.top&&!localStorage.getItem('ck'))document.getElementById('ck').style.display='flex'}catch(e){if(window.self===window.top)document.getElementById('ck').style.display='flex'}</script>
 <!-- /cookie-notice -->
 </body>
 </html>
