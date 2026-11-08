@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- ДЕМО: закрыто от поисковиков. После оплаты удалите следующую строку и блок class="demo" -->
+<meta name="robots" content="noindex, nofollow">
+<title>Лаборатория красоты Н45 — салон красоты на Васильевском острове</title>
+<meta name="description" content="Лаборатория красоты Н45 — салон красоты на Наличной улице, 45 к1 (Васильевский остров): маникюр, педикюр, брови, макияж. Ежедневно 10:00–22:00.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#faf7f5;--surface:#ffffff;--ink:#261c12;--muted:#72665a;--accent:#8a5a2b;--accent-soft:#f5e8db;--line:#ece5df;--star:#c98a1b;
+--display:"Unbounded","Arial Black",system-ui,sans-serif;--body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#16120d;--surface:#221c16;--ink:#f5f0ea;--muted:#c4b7ab;--accent:#e4b281;--accent-soft:#432e19;--line:#383029;--star:#e2a83a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#16120d;--surface:#221c16;--ink:#f5f0ea;--muted:#c4b7ab;--accent:#e4b281;--accent-soft:#432e19;--line:#383029;--star:#e2a83a;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6}
+img{max-width:100%}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.5rem,3.5vw,2.1rem);margin-bottom:1.5rem}
+a{color:inherit}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--accent);color:var(--bg);text-decoration:none;border:0;border-radius:999px;padding:.85rem 1.6rem;font:inherit;font-weight:700;cursor:pointer}
+.btn:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+header.top{padding-block:1rem;border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:.7rem;font-family:var(--display);font-weight:700;font-size:1.15rem;text-decoration:none}
+.logo img{width:44px;height:44px;border-radius:12px;object-fit:cover;background:var(--surface);border:1px solid var(--line)}
+.phone{font-weight:700;font-variant-numeric:tabular-nums;color:inherit;text-decoration:none;white-space:nowrap}
+.phone:hover{color:var(--accent);text-decoration:underline}
+.call{display:inline-flex;align-items:center;gap:.4rem}
+.call::before{content:"\260E";font-size:.95em;color:var(--accent)}
+.hero{padding-block:clamp(2.5rem,7vw,5rem)}
+.hero h1{font-size:clamp(2rem,6.2vw,4rem);max-width:17ch}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{font-size:1.12rem;color:var(--muted);max-width:54ch;margin:1.25rem 0 2rem}
+.rating{display:inline-flex;align-items:center;gap:.6rem;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem .4rem .5rem;margin-bottom:1.5rem;font-size:.95rem;text-decoration:none}
+.rating b{background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:.15rem .6rem;font-variant-numeric:tabular-nums}
+.stars{color:var(--star);letter-spacing:.1em}
+.actions{display:flex;gap:.75rem;flex-wrap:wrap}
+.facts{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;margin-top:2rem;color:var(--muted);font-size:.95rem}
+.facts span{display:inline-flex;gap:.4rem;align-items:center}
+.facts span::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent)}
+section{padding-block:clamp(2.5rem,6vw,4.5rem)}
+.price{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:2rem 3rem}
+.price h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:.75rem}
+.price ul{list-style:none;margin:0;padding:0}
+.price li{display:flex;align-items:baseline;gap:.6rem;padding-block:.6rem;border-bottom:1px dashed var(--line)}
+.price li span{min-width:0;flex:1}
+.price li small{color:var(--muted);white-space:nowrap}
+.price li strong{font-variant-numeric:tabular-nums;white-space:nowrap}
+.note{color:var(--muted);font-size:.9rem;margin-top:1rem}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:1rem}
+.gallery img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;display:block;background:var(--accent-soft)}
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:1.25rem}
+.review{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.4rem;display:flex;flex-direction:column;gap:.75rem}
+.review p{margin:0}
+.review footer{color:var(--muted);font-size:.9rem;margin-top:auto}
+.book{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.book .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:2.5rem}
+.info dl{margin:0;display:grid;gap:1rem}
+.info dt{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+.info dd{margin:0;font-weight:500}
+.soc{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.4rem}
+.soc a{border:1.5px solid var(--line);border-radius:999px;padding:.3rem .9rem;text-decoration:none;font-weight:700;font-size:.9rem}
+.soc a:hover{border-color:var(--accent);color:var(--accent)}
+form{display:grid;gap:.9rem}
+form h3{font-size:1.2rem}
+form p{margin:0;color:var(--muted);font-size:.95rem}
+label{font-size:.9rem;font-weight:500;display:grid;gap:.35rem}
+input,select{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:.75rem .9rem;width:100%}
+.consent{display:flex;gap:.6rem;align-items:flex-start;font-weight:400;font-size:.85rem;color:var(--muted)}
+.consent input{width:auto;margin-top:.25rem;accent-color:var(--accent)}
+.err{margin:0;color:#b3261e;font-size:.9rem}
+.site-foot{padding-block:2rem;color:var(--muted);font-size:.85rem}
+.site-foot .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.demo{background:var(--ink);color:var(--bg);font-size:.88rem;line-height:1.45}
+.demo .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.6rem 1rem;padding-block:.65rem}
+.demo p{margin:0;min-width:0}
+.demo .num{font-weight:700;font-variant-numeric:tabular-nums;user-select:all;white-space:nowrap}
+.demo .links{display:flex;gap:.5rem;flex-wrap:wrap}
+.demo a{display:inline-flex;align-items:center;border-radius:999px;padding:.35rem .9rem;font-weight:700;text-decoration:none;border:1.5px solid var(--bg);color:var(--bg)}
+.demo a:hover,.demo a:focus-visible{background:var(--bg);color:var(--ink)}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=114105889','ym');ym(114105889,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114105889" style="position:absolute;left:-9999px;" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+<div class="demo" role="note">
+  <div class="wrap">
+    <p>Демо-версия сайта для «Лаборатория красоты Н45» · доступна до 24.11. Подготовила Татьяна Кайль-Панарат · MAX и WhatsApp: <span class="num">+7 981 981-28-15</span></p>
+    <div class="links">
+      <a href="https://max.ru/u/f9LHodD0cOL_1CkPtzJaEQ5YA1wktkU90Z6QkDGbVbUujKQKHuYsoUjRCAA" target="_blank" rel="noopener">Написать в MAX</a>
+      <a href="https://wa.me/79819812815" target="_blank" rel="noopener">Написать в WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#"><img src="https://avatars.mds.yandex.net/get-altay/21062325/2a000001a0e6dba0a1d9e518e5dccb3fc1b1/S_height" alt="">Лаборатория красоты Н45</a>
+    <a class="phone call" href="tel:+79312472130">+7 (931) 247-21-30</a>
+  </div>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <a class="rating" href="https://yandex.ru/maps/org/laboratories_krasoti_45/210038580294/reviews/" target="_blank" rel="noopener"><b>4,9</b><span class="stars">★★★★★</span><span>293 оценки на Яндекс Картах</span></a>
+    <h1>Маникюр, брови и макияж <em>на Наличной</em></h1>
+    <p>Салон красоты на Наличной улице, 45, корп. 1: маникюр и педикюр с большим выбором цветов, японский маникюр, брови, макияж и экспресс-образы. Удобная онлайн-запись и парковка рядом.</p>
+    <div class="actions">
+      <a class="btn" href="#book">Записаться</a>
+      <a class="btn ghost" href="#price">Смотреть цены</a>
+    </div>
+    <div class="facts"><span>Ежедневно 10:00–22:00</span><span>Большой выбор цветов</span><span>Парковка рядом</span></div>
+  </div>
+
+  <section id="price">
+    <div class="wrap">
+      <h2>Услуги и цены</h2>
+      <div class="price"><div><h3>Маникюр</h3><ul><li><span>Маникюр</span><strong>1 350 ₽</strong></li><li><span>Японский маникюр</span><strong>1 650 ₽</strong></li><li><span>Снятие + маникюр + гель-лак</span><strong>2 400 ₽</strong></li><li><span>Мужской маникюр</span><strong>1 400 ₽</strong></li></ul></div><div><h3>Педикюр</h3><ul><li><span>Педикюр</span><strong>2 150 ₽</strong></li><li><span>Смарт-педикюр</span><strong>2 350 ₽</strong></li><li><span>Снятие + педикюр + гель-лак</span><strong>2 950 ₽</strong></li></ul></div><div><h3>Брови и макияж</h3><ul><li><span>Коррекция + окрашивание бровей</span><strong>1 300 ₽</strong></li><li><span>Ламинирование бровей</span><strong>2 300 ₽</strong></li><li><span>Макияж</span><strong>2 800 ₽</strong></li></ul></div></div>
+      <p class="note">Цены из прайса салона на Яндекс Картах. Точную стоимость подскажет администратор.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Наши работы</h2>
+      <div class="gallery"><img src="https://avatars.mds.yandex.net/get-altay/3633604/2a000001751de53243dbe0b5ed77dc1a2e31/XL" alt="Маникюр с дизайном" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/2419289/2a000001751de54f8135be88a3981457018d/XL" alt="Оформление бровей" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/10703420/2a0000018a1c6e067d86e90ea94419cbf965/XL" alt="Маникюр" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/4054675/2a000001751de56b4aaefd1660fa4a41fd8c/XL" alt="Педикюр" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Что говорят клиенты</h2>
+      <div class="reviews"><article class="review"><span class="stars" aria-label="5 из 5">★★★★★</span><p>Очень уютный салон, расположение удобное. Была на маникюре с покрытием — мастер Анна профессионально, быстро, качественно привела в порядок мои ноготочки. Пишу отзыв через 3 недели — всё отлично.</p><footer>Василина Рыбайкина, Яндекс Карты</footer></article><article class="review"><span class="stars" aria-label="5 из 5">★★★★★</span><p>Неоднократно делала педикюр в данном салоне, всё очень быстро и аккуратно, большой выбор цветов. Удобная онлайн-запись, всегда есть окошки на неделе.</p><footer>Ольга М., Яндекс Карты</footer></article><article class="review"><span class="stars" aria-label="5 из 5">★★★★★</span><p>Очень приятное место, внимательные и отзывчивые мастера, особенно хочется отметить Мариам — волшебные ручки, делает качественно, учитывает все пожелания.</p><footer>Ирина Бухарина, Яндекс Карты</footer></article></div>
+      <p class="note"><a href="https://yandex.ru/maps/org/laboratories_krasoti_45/210038580294/reviews/" target="_blank" rel="noopener">Все 293 оценки — на Яндекс Картах</a></p>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="wrap">
+      <div class="info">
+        <h2>Как нас найти</h2>
+        <dl>
+          <div><dt>Адрес</dt><dd>Наличная ул., 45, корп. 1</dd></div>
+          <div><dt>Метро</dt><dd>Остановка «Новосмоленская набережная» — 240 м</dd></div>
+          <div><dt>Часы работы</dt><dd>Ежедневно, 10:00–22:00</dd></div>
+          <div><dt>Телефон</dt><dd><a class="phone call" href="tel:+79312472130">+7 (931) 247-21-30</a></dd></div>
+          <div><dt>Мы в мессенджерах</dt><dd class="soc"><a href="https://t.me/nailworkshopprimorskay" target="_blank" rel="noopener">Telegram</a><a href="https://vk.ru/nail_workshop_primorskaya" target="_blank" rel="noopener">ВКонтакте</a></dd></div>
+        </dl>
+      </div>
+      <form id="f" novalidate>
+        <h3>Запись через WhatsApp</h3>
+        <p>Заполните три поля — откроется WhatsApp с готовым сообщением администратору.</p>
+        <label for="name">Ваше имя<input id="name" name="name" placeholder="Как к вам обращаться" required></label>
+        <label for="svc">Услуга<select id="svc" name="svc"><option>Маникюр</option><option>Педикюр</option><option>Брови</option><option>Макияж и образ</option></select></label>
+        <label for="when">Когда удобно<input id="when" name="when" placeholder="Например, суббота после 15:00"></label>
+        <label class="consent" for="agree"><input id="agree" name="agree" type="checkbox"> <span>Нажимая кнопку, я даю согласие на обработку персональных данных и соглашаюсь с <a href="../privacy/" target="_blank" rel="noopener">политикой конфиденциальности</a></span></label>
+        <p class="err" id="err" hidden>Отметьте согласие на обработку данных, чтобы отправить заявку.</p>
+        <button class="btn" type="submit">Записаться через WhatsApp</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap"><span>© 2026 Лаборатория красоты Н45 · салон красоты на Наличной</span><span>Фото, цены и отзывы — из карточки на Яндекс Картах</span></div>
+</footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var n=this.name.value.trim();
+  if(!n){this.name.focus();return;}
+  if(!this.agree.checked){document.getElementById('err').hidden=false;this.agree.focus();return;}
+  var msg='Здравствуйте! Меня зовут '+n+'. Хочу записаться: '+this.svc.value+(this.when.value.trim()?'. Удобно: '+this.when.value.trim():'')+'.';
+  window.location.href='https://wa.me/79312472130?text='+encodeURIComponent(msg);
+});
+</script>
+<script>
+(function(){if(Date.now()<=Date.parse('2026-11-24T23:59:59+03:00'))return;
+document.title='Демо-версия больше недоступна';
+document.body.innerHTML='<main style="min-height:100vh;display:grid;place-items:center;padding:24px;font-family:system-ui,sans-serif;background:#f5f4fb;color:#17142b;text-align:center"><div style="max-width:440px"><h1 style="font-size:1.5rem;margin:0 0 .8rem">Демо-версия сайта больше недоступна</h1><p style="color:#5f5b78;line-height:1.6;margin:0 0 1.5rem">Этот пример сайта для «Лаборатория красоты Н45» хранился 14 дней. Хотите его вернуть или запустить по-настоящему — напишите Татьяне Кайль-Панарат: +7 981 981-28-15.</p><p style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin:0"><a href="https://wa.me/79819812815" style="background:#5338e8;color:#fff;padding:.8rem 1.3rem;border-radius:12px;text-decoration:none;font-weight:700">WhatsApp</a><a href="https://max.ru/u/f9LHodD0cOL_1CkPtzJaEQ5YA1wktkU90Z6QkDGbVbUujKQKHuYsoUjRCAA" style="border:1.5px solid #5338e8;color:#5338e8;padding:.8rem 1.3rem;border-radius:12px;text-decoration:none;font-weight:700">MAX</a></p></div></main>';})();
+</script>
+<!-- cookie-notice -->
+<div id="ck" style="display:none;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:9999;max-width:560px;margin:0 auto;background:#1d1d1b;color:#fff;border-radius:14px;padding:12px 14px;font:14px/1.45 system-ui,-apple-system,'Segoe UI',sans-serif;box-shadow:0 8px 28px rgba(0,0,0,.25);align-items:center;gap:12px">
+<span style="flex:1">Сайт использует cookies и Яндекс Метрику для статистики посещений. <a href="../politika/" style="color:#ffd84d">Подробнее</a></span>
+<button type="button" onclick="try{localStorage.setItem('ck','1')}catch(e){};document.getElementById('ck').style.display='none'" style="font:inherit;font-weight:700;border:0;border-radius:10px;padding:8px 14px;background:#ffd84d;color:#1d1d1b;cursor:pointer">Понятно</button>
+</div>
+<script>try{if(window.self===window.top&&!localStorage.getItem('ck'))document.getElementById('ck').style.display='flex'}catch(e){if(window.self===window.top)document.getElementById('ck').style.display='flex'}</script>
+<!-- /cookie-notice -->
+</body>
+</html>
