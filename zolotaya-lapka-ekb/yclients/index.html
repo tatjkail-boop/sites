@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Картинки для YClients — Золотая лапка</title>
+<style>
+:root{--bg:#f7f5f0;--ink:#2a2418;--mut:#7a705e;--acc:#a8842a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:24px max(16px,env(safe-area-inset-left))}
+h1{font-size:1.6rem;margin:.2rem 0 .4rem}
+p.lead{color:var(--mut);margin:0 0 1.2rem;max-width:62ch}
+.top{display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:1.5rem}
+button,.btn{background:var(--acc);color:#fff;border:0;border-radius:999px;padding:.65rem 1.2rem;font-weight:700;font-size:.95rem;cursor:pointer;text-decoration:none}
+button.ghost{background:transparent;color:var(--acc);border:1.5px solid var(--acc)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,420px),1fr));gap:1.2rem}
+figure{margin:0;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+canvas{display:block;width:100%;height:auto;aspect-ratio:1290/600;background:#eee}
+figcaption{display:flex;justify-content:space-between;align-items:center;gap:.6rem;padding:.7rem .9rem}
+figcaption b{font-size:.95rem}
+figcaption small{display:block;color:var(--mut);font-size:.8rem}
+.note{color:var(--mut);font-size:.85rem;margin-top:1.5rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Картинки для онлайн-записи YClients</h1>
+  <p class="lead">Фото работ «Золотой лапки», обрезанные под формат карточек услуг в YClients (1290×600, широкая полоса). Ногти в центре кадра, ничего важного не обрезается. Нажмите «Скачать» у нужной картинки и загрузите её в услугу в YClients.</p>
+  <div class="top"><button id="all">Скачать все</button></div>
+  <div class="grid" id="g"></div>
+  <p class="note">Фото — из карточки студии на Яндекс Картах. Размер 1290×600 px, JPEG.</p>
+</div>
+<script>
+var W=1290,H=600,B='https://avatars.mds.yandex.net/get-altay/';
+var P=[
+ ['11487452/2a00000191fe9b4afb806a32384035bba6f7','Френч','Маникюр с покрытием, френч',.47,'01-french'],
+ ['20840442/2a000001a0cb68521d56e6ed7917264ca2c1','Красный гель-лак','Маникюр с покрытием гель-лак',.47,'02-gel-lak-krasnyj'],
+ ['4530524/2a000001799d5a2280637be4a9f3646d9e8c','Розовое омбре','Наращивание / дизайн',.5,'03-ombre'],
+ ['20274901/2a000001a0cb68530a616a52e2dbed3dbfd7','Нюд с дизайном','Дизайн ногтей',.45,'04-nyud-dizajn'],
+ ['19838109/2a000001a0cb6851da72662d3671b247292d','Натуральные ногти','Укрепление / маникюр без покрытия',.5,'05-ukreplenie'],
+ ['4509886/2a000001799d5a7e21b38534dc2821c40eaa','Синий с дизайном','Маникюр с покрытием',.5,'06-sinij'],
+ ['2004078/2a0000016edaa4db129329a132562f0a99ed','Рисунок на ногтях','Дизайн ногтей',.38,'07-risunok'],
+ ['4618902/2a000001799d59c7aba1db25778f449f1436','Миндальная форма','Наращивание ногтей',.5,'08-mindal']
+];
+var g=document.getElementById('g'),cv=[];
+P.forEach(function(p,i){
+  var f=document.createElement('figure');
+  f.innerHTML='<canvas width="'+W+'" height="'+H+'"></canvas><figcaption><span><b>'+p[1]+'</b><small>для услуги: '+p[2]+'</small></span><button class="ghost">Скачать</button></figcaption>';
+  g.appendChild(f);
+  var c=f.querySelector('canvas');cv.push(c);
+  var im=new Image();im.crossOrigin='anonymous';
+  im.onload=function(){
+    var x=c.getContext('2d'),s=Math.max(W/im.naturalWidth,H/im.naturalHeight);
+    var sw=W/s,sh=H/s,sx=(im.naturalWidth-sw)/2,sy=Math.min(Math.max(im.naturalHeight*p[3]-sh/2,0),im.naturalHeight-sh);
+    x.imageSmoothingQuality='high';x.drawImage(im,sx,sy,sw,sh,0,0,W,H);
+  };
+  im.src=B+p[0]+'/orig';
+  f.querySelector('button').onclick=function(){dl(i)};
+});
+function dl(i){
+  cv[i].toBlob(function(b){var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='zolotaya-lapka-'+P[i][4]+'.jpg';document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1000)},'image/jpeg',.9);
+}
+document.getElementById('all').onclick=function(){P.forEach(function(_,i){setTimeout(function(){dl(i)},i*400)})};
+</script>
+</body>
+</html>
