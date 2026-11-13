@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Наталья Морозова — страховой агент · ОСАГО, КАСКО, ипотека</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14213d;--muted:#5a6478;--line:#e3e8f0;--soft:#f2f6fb;--blue:#1f5fd1;--blue-d:#1648a3;--green:#1fa55a}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Manrope',system-ui,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.55}
+a{color:inherit;text-decoration:none}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+.demo{background:#111a33;color:#fff;font-size:13px;text-align:center;padding:8px 16px}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);z-index:5}
+header.top .w{display:flex;justify-content:space-between;align-items:center;height:64px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800}
+.logo i{width:36px;height:36px;border-radius:10px;background:var(--blue);display:grid;place-items:center;color:#fff;font-style:normal}
+.tel{font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;padding:15px 24px;border-radius:12px;border:0;cursor:pointer;font-size:16px;font-family:inherit}
+.btn-blue{background:var(--blue);color:#fff}.btn-blue:hover{background:var(--blue-d)}
+.btn-green{background:var(--green);color:#fff}
+.btn-line{border:2px solid var(--line);background:#fff}
+.hero{background:linear-gradient(160deg,var(--soft),#fff 70%);padding:56px 0 64px}
+.hero .w{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.k{color:var(--blue);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+h1{font-size:clamp(32px,5vw,50px);line-height:1.08;font-weight:800;letter-spacing:-.02em;margin-bottom:18px}
+.hero p{font-size:18px;color:var(--muted);margin-bottom:22px;max-width:540px}
+.pts{list-style:none;display:grid;gap:10px;margin-bottom:28px;font-weight:600}
+.pts li:before{content:"✓";color:var(--green);font-weight:800;margin-right:10px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.card-me{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 24px 50px -30px rgba(20,33,61,.35);text-align:center}
+.ava{width:120px;height:120px;border-radius:50%;margin:0 auto 16px;background:linear-gradient(135deg,#cfe0fb,#e9f1fd);display:grid;place-items:center;font-size:40px;font-weight:800;color:var(--blue)}
+.card-me b{display:block;font-size:20px}
+.card-me span{color:var(--muted);font-size:14px}
+.stats{display:flex;justify-content:center;gap:18px;margin-top:18px}
+.stats div{font-size:13px;color:var(--muted)}.stats strong{display:block;font-size:22px;color:var(--ink)}
+section{padding:64px 0}
+h2{font-size:clamp(26px,3.6vw,36px);font-weight:800;letter-spacing:-.02em;margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.s{border:1px solid var(--line);border-radius:18px;padding:24px;background:#fff}
+.s .ic{font-size:30px;margin-bottom:10px}
+.s h3{font-size:19px;margin-bottom:6px}
+.s p{color:var(--muted);font-size:15px;margin-bottom:12px}
+.s .pr{font-weight:800;color:var(--blue)}
+.steps{background:var(--soft)}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.st div{background:#fff;border-radius:18px;padding:24px}
+.st b{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--blue);color:#fff;margin-bottom:12px}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+form{background:#fff;border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:14px}
+label{font-weight:700;font-size:14px;display:grid;gap:6px}
+input,select{font:inherit;padding:13px 14px;border:1px solid var(--line);border-radius:10px;background:var(--soft)}
+.rev .grid div{border:1px solid var(--line);border-radius:18px;padding:22px}
+.rev .stars{color:#f5b301;margin-bottom:8px}
+.rev small{color:var(--muted);display:block;margin-top:10px}
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{color:var(--muted);margin-top:8px}
+footer{background:var(--ink);color:rgba(255,255,255,.75);padding:32px 0;font-size:14px}
+footer b{color:#fff}
+@media(max-width:860px){.hero .w,.calc{grid-template-columns:1fr}.grid,.st{grid-template-columns:1fr}.tel{display:none}}
+</style>
+</head>
+<body>
+<div class="demo">Пример сайта для страхового агента · имя и отзывы вымышлены · подготовила Татьяна Кайль-Панарат</div>
+<header class="top"><div class="w">
+  <div class="logo"><i>НМ</i>Наталья Морозова</div>
+  <a class="tel" href="#">+7 900 000-00-00</a>
+  <a class="btn btn-green" href="#calc" style="padding:10px 16px;font-size:14px">Рассчитать</a>
+</div></header>
+
+<section class="hero"><div class="w">
+  <div>
+    <div class="k">Страховой агент · Санкт-Петербург</div>
+    <h1>Страховка за 15 минут — без очередей и переплат</h1>
+    <p>Оформлю ОСАГО, КАСКО, страхование ипотеки и квартиры. Сравню предложения и подскажу, где выгоднее именно вам.</p>
+    <ul class="pts"><li>Расчёт бесплатно, ответ в течение 15 минут</li><li>Полис на почту — ехать никуда не нужно</li><li>Помогу при наступлении страхового случая</li></ul>
+    <div class="cta"><a class="btn btn-blue" href="#calc">Рассчитать стоимость</a><a class="btn btn-line" href="#">Написать в WhatsApp</a></div>
+  </div>
+  <div class="card-me">
+    <div class="ava">НМ</div>
+    <b>Наталья Морозова</b><span>Страховой агент, 8 лет в страховании</span>
+    <div class="stats"><div><strong>1 200+</strong>полисов</div><div><strong>4.9</strong>отзывы</div><div><strong>24/7</strong>на связи</div></div>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <h2>Что оформляю</h2>
+  <div class="grid">
+    <div class="s"><div class="ic">🚗</div><h3>ОСАГО</h3><p>Электронный полис без осмотра. Учту ваш стаж и КБМ.</p><div class="pr">Расчёт за 5 минут</div></div>
+    <div class="s"><div class="ic">🛡️</div><h3>КАСКО</h3><p>Подберу франшизу и покрытие, чтобы не переплачивать.</p><div class="pr">Сравню 3–5 вариантов</div></div>
+    <div class="s"><div class="ic">🏠</div><h3>Страхование ипотеки</h3><p>Для продления полиса по требованию банка — часто дешевле, чем в банке.</p><div class="pr">Экономия до 30–50%*</div></div>
+    <div class="s"><div class="ic">🔑</div><h3>Квартира и дом</h3><p>Защита от залива, пожара и кражи. Можно застраховать только ремонт.</p><div class="pr">от 1 000 ₽ в год*</div></div>
+    <div class="s"><div class="ic">✈️</div><h3>Путешествия</h3><p>Полис для визы и отдыха за пару минут.</p><div class="pr">Онлайн</div></div>
+    <div class="s"><div class="ic">❤️</div><h3>Здоровье и жизнь</h3><p>Страхование от несчастного случая, для спорта и детей.</p><div class="pr">Подберу программу</div></div>
+  </div>
+</div></section>
+
+<section class="steps"><div class="w">
+  <h2>Как это работает</h2>
+  <div class="st">
+    <div><b>1</b><h3>Оставляете заявку</h3><p>Форма ниже, WhatsApp или звонок.</p></div>
+    <div><b>2</b><h3>Получаете расчёт</h3><p>Присылаю варианты с ценами и объясняю разницу.</p></div>
+    <div><b>3</b><h3>Полис на почту</h3><p>Оплачиваете онлайн, полис приходит в тот же день.</p></div>
+  </div>
+</div></section>
+
+<section id="calc"><div class="w calc">
+  <div>
+    <h2>Рассчитать стоимость</h2>
+    <p style="color:var(--muted);font-size:18px">Заполните 3 поля — я перезвоню или напишу в WhatsApp с расчётом. Это бесплатно и ни к чему не обязывает.</p>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Пример формы — в настоящем сайте заявка уйдёт агенту'">
+    <label>Что застраховать<select><option>ОСАГО</option><option>КАСКО</option><option>Ипотека</option><option>Квартира</option><option>Другое</option></select></label>
+    <label>Ваше имя<input placeholder="Как к вам обращаться"></label>
+    <label>Телефон или WhatsApp<input placeholder="+7"></label>
+    <button class="btn btn-blue" type="submit">Получить расчёт</button>
+  </form>
+</div></section>
+
+<section class="rev"><div class="w">
+  <h2>Отзывы клиентов</h2>
+  <div class="grid">
+    <div><div class="stars">★★★★★</div>Продлила страховку ипотеки — вышло заметно дешевле, чем предлагал банк. Всё онлайн, за один вечер.<small>Пример отзыва</small></div>
+    <div><div class="stars">★★★★★</div>Наталья быстро оформила ОСАГО и подсказала, как сохранить скидку за безаварийность.<small>Пример отзыва</small></div>
+    <div><div class="stars">★★★★★</div>После залива помогла собрать документы, выплату получили без нервов.<small>Пример отзыва</small></div>
+  </div>
+</div></section>
+
+<section class="faq"><div class="w">
+  <h2>Частые вопросы</h2>
+  <details><summary>Нужно ли куда-то ехать?</summary><p>Нет. Все полисы оформляются онлайн и приходят на почту.</p></details>
+  <details><summary>С какими страховыми компаниями вы работаете?</summary><p>Здесь агент указывает компании, с которыми у него заключён агентский договор.</p></details>
+  <details><summary>Сколько стоят ваши услуги?</summary><p>Для клиента — бесплатно. Вы платите только стоимость полиса.</p></details>
+</div></section>
+
+<footer><div class="w"><b>Наталья Морозова</b> · страховой агент · Санкт-Петербург<br>* Итоговая стоимость зависит от условий страховой компании. Сайт-пример, все данные вымышлены.</div></footer>
+</body>
+</html>
