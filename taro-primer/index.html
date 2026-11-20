@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Вероника Лунная — таролог · расклады онлайн</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#171226;--bg2:#211a36;--card:#2a2242;--ink:#f4efe6;--muted:#b9aed0;--gold:#d9b46a;--gold-d:#c29a4c;--line:rgba(217,180,106,.25)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Manrope',system-ui,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+.demo{background:#0d0a17;color:#e8dfc9;font-size:13px;text-align:center;padding:8px 16px}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(23,18,38,.92);backdrop-filter:blur(8px);z-index:5}
+header.top .w{display:flex;justify-content:space-between;align-items:center;height:64px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:19px}
+.logo i{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-style:normal;font-size:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;padding:15px 24px;border-radius:999px;border:0;cursor:pointer;font-size:16px;font-family:inherit}
+.btn-gold{background:var(--gold);color:#1b1428}.btn-gold:hover{background:var(--gold-d)}
+.btn-line{border:1.5px solid var(--line);color:var(--ink);background:transparent}
+.hero{padding:64px 0 72px;background:radial-gradient(ellipse at 80% 20%,rgba(217,180,106,.14),transparent 55%),radial-gradient(ellipse at 10% 90%,rgba(140,100,220,.18),transparent 50%)}
+.hero .w{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.k{color:var(--gold);font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:700}
+h1{font-size:clamp(34px,5.4vw,56px);line-height:1.08;margin-bottom:18px}
+h1 em{font-style:italic;color:var(--gold)}
+.hero p{font-size:18px;color:var(--muted);margin-bottom:22px;max-width:540px}
+.pts{list-style:none;display:grid;gap:10px;margin-bottom:28px;font-weight:600}
+.pts li:before{content:"✦";color:var(--gold);margin-right:10px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.cards{position:relative;height:380px;max-width:100%}
+.tc{position:absolute;width:170px;height:290px;border-radius:16px;background:linear-gradient(160deg,#2f2550,#1c1530);border:1.5px solid var(--gold);box-shadow:0 30px 60px -25px rgba(0,0,0,.7);display:grid;place-items:center}
+.tc svg{width:120px;height:220px}
+.tc:nth-child(1){left:8%;top:40px;transform:rotate(-12deg)}
+.tc:nth-child(2){left:32%;top:0;z-index:2}
+.tc:nth-child(3){left:56%;top:40px;transform:rotate(12deg)}
+section{padding:68px 0}
+h2{font-size:clamp(28px,3.8vw,40px);margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.s{border:1px solid var(--line);border-radius:20px;padding:26px;background:var(--card)}
+.s .ic{font-size:28px;margin-bottom:10px}
+.s h3{font-size:21px;margin-bottom:6px}
+.s p{color:var(--muted);font-size:15px;margin-bottom:14px}
+.s .pr{font-weight:800;color:var(--gold);font-size:18px}
+.steps{background:var(--bg2)}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.st div{border:1px solid var(--line);border-radius:20px;padding:26px}
+.st b{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);margin-bottom:12px;font-family:'Playfair Display',serif;font-size:20px}
+.st h3{font-size:20px;margin-bottom:6px}.st p{color:var(--muted)}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center}
+.ava{aspect-ratio:1;max-width:320px;width:100%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#4a3a78,#1c1530 70%);border:1.5px solid var(--gold);display:grid;place-items:center;font-family:'Playfair Display',serif;font-size:72px;color:var(--gold);margin:0 auto}
+.about p{color:var(--muted);font-size:17px;margin-bottom:14px}
+.stats{display:flex;gap:28px;margin-top:10px;flex-wrap:wrap}
+.stats div{font-size:13px;color:var(--muted)}.stats strong{display:block;font-size:26px;color:var(--ink);font-family:'Playfair Display',serif}
+.book{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+form{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;display:grid;gap:14px}
+label{font-weight:700;font-size:14px;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:#1b1530;color:var(--ink)}
+.rev .grid>div{border:1px solid var(--line);border-radius:20px;padding:24px;background:var(--card)}
+.rev .stars{color:var(--gold);margin-bottom:8px}
+.rev small{color:var(--muted);display:block;margin-top:10px}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{color:var(--muted);margin-top:8px}
+footer{background:#0d0a17;color:var(--muted);padding:32px 0;font-size:14px}
+footer b{color:var(--ink)}
+@media(max-width:860px){.hero .w,.book,.about{grid-template-columns:1fr}.grid,.st{grid-template-columns:1fr}.cards{height:330px}.tc{width:140px;height:240px}.tc svg{width:100px;height:180px}}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=114105889','ym');ym(114105889,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114105889" style="position:absolute;left:-9999px;" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+<div class="demo">Пример сайта для таролога · имя, цены и отзывы вымышлены · подготовила Татьяна Кайль-Панарат</div>
+<header class="top"><div class="w">
+  <div class="logo"><i>☾</i>Вероника Лунная</div>
+  <a class="btn btn-gold" href="#book" style="padding:10px 18px;font-size:14px">Записаться</a>
+</div></header>
+
+<section class="hero"><div class="w">
+  <div>
+    <div class="k">Таролог · консультации онлайн</div>
+    <h1>Расклад Таро, который помогает <em>увидеть ситуацию ясно</em></h1>
+    <p>Отношения, работа, деньги, важное решение — разберём ваш вопрос на картах спокойно и бережно. Онлайн из любого города, без долгого ожидания.</p>
+    <ul class="pts"><li>Ответ в течение 24 часов</li><li>Фото расклада и подробная расшифровка</li><li>Конфиденциально — о вашем вопросе знаем только мы</li></ul>
+    <div class="cta"><a class="btn btn-gold" href="#book">Задать вопрос картам</a><a class="btn btn-line" href="#price">Смотреть цены</a></div>
+  </div>
+  <div class="cards" aria-hidden="true">
+    <div class="tc"><svg viewBox="0 0 120 220" fill="none" stroke="#d9b46a" stroke-width="1.6"><circle cx="60" cy="80" r="30"/><path d="M60 40v-14M60 134v-14M20 80H6M114 80h-14M32 52l-9-9M97 117l-9-9M88 52l9-9M23 117l9-9"/><path d="M30 170h60M38 186h44M46 202h28"/></svg></div>
+    <div class="tc"><svg viewBox="0 0 120 220" fill="none" stroke="#d9b46a" stroke-width="1.6"><path d="M78 50a34 34 0 1 0 0 64 28 28 0 1 1 0-64z"/><path d="M60 150l4 9 10 1-7 7 2 10-9-5-9 5 2-10-7-7 10-1z"/><circle cx="34" cy="40" r="2"/><circle cx="92" cy="140" r="2"/><circle cx="28" cy="130" r="1.5"/><path d="M30 196h60"/></svg></div>
+    <div class="tc"><svg viewBox="0 0 120 220" fill="none" stroke="#d9b46a" stroke-width="1.6"><path d="M60 30l8 24h25l-20 15 8 24-21-15-21 15 8-24-20-15h25z"/><path d="M24 150c12-14 24-14 36 0s24 14 36 0M24 172c12-14 24-14 36 0s24 14 36 0"/><path d="M40 200h40"/></svg></div>
+  </div>
+</div></section>
+
+<section id="price"><div class="w">
+  <h2>Расклады и цены</h2>
+  <div class="grid">
+    <div class="s"><div class="ic">💌</div><h3>Отношения</h3><p>Что чувствует партнёр, есть ли перспектива, как выйти из конфликта.</p><div class="pr">1 500 ₽</div></div>
+    <div class="s"><div class="ic">💼</div><h3>Работа и деньги</h3><p>Менять ли работу, стоит ли начинать дело, где точки роста.</p><div class="pr">1 500 ₽</div></div>
+    <div class="s"><div class="ic">❓</div><h3>Один вопрос</h3><p>Короткий ответ на конкретный вопрос — «да / нет» с пояснением.</p><div class="pr">500 ₽</div></div>
+    <div class="s"><div class="ic">🌙</div><h3>Расклад на месяц</h3><p>Главные события, на что обратить внимание, благоприятные дни.</p><div class="pr">2 000 ₽</div></div>
+    <div class="s"><div class="ic">✨</div><h3>Расклад на год</h3><p>12 позиций — по одной на каждый месяц, плюс общий итог года.</p><div class="pr">3 500 ₽</div></div>
+    <div class="s"><div class="ic">🎧</div><h3>Личная консультация</h3><p>60 минут онлайн голосом или видео: разбираем всё, что волнует.</p><div class="pr">3 000 ₽</div></div>
+  </div>
+</div></section>
+
+<section class="steps"><div class="w">
+  <h2>Как проходит расклад</h2>
+  <div class="st">
+    <div><b>1</b><h3>Вы пишете вопрос</h3><p>Через форму ниже, в MAX или Telegram. Можно анонимно.</p></div>
+    <div><b>2</b><h3>Я делаю расклад</h3><p>В спокойной обстановке, с фото карт для вас.</p></div>
+    <div><b>3</b><h3>Получаете ответ</h3><p>Подробная расшифровка текстом или голосом в течение 24 часов.</p></div>
+  </div>
+</div></section>
+
+<section><div class="w about">
+  <div class="ava">ВЛ</div>
+  <div>
+    <h2>Обо мне</h2>
+    <p>Меня зовут Вероника, я работаю с картами Таро больше 7 лет. Для меня Таро — это способ посмотреть на ситуацию со стороны, услышать себя и найти решение, которое вы и так чувствуете.</p>
+    <p>Я не пугаю и не «снимаю порчу» — только честный разбор вашего вопроса и бережные подсказки.</p>
+    <div class="stats"><div><strong>7 лет</strong>практики</div><div><strong>2 000+</strong>раскладов</div><div><strong>24 ч</strong>на ответ</div></div>
+  </div>
+</div></section>
+
+<section id="book" class="steps"><div class="w book">
+  <div>
+    <h2>Задать вопрос картам</h2>
+    <p style="color:var(--muted);font-size:18px">Выберите расклад и коротко опишите ситуацию — я напишу вам в течение дня, расскажу про оплату и сделаю расклад.</p>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Пример формы — на настоящем сайте заявка уйдёт тарологу'">
+    <label>Расклад<select><option>Отношения — 1 500 ₽</option><option>Работа и деньги — 1 500 ₽</option><option>Один вопрос — 500 ₽</option><option>Расклад на месяц — 2 000 ₽</option><option>Расклад на год — 3 500 ₽</option><option>Личная консультация — 3 000 ₽</option></select></label>
+    <label>Ваше имя<input placeholder="Можно только имя"></label>
+    <label>MAX, Telegram или телефон<input placeholder="Куда прислать ответ"></label>
+    <label>Ваш вопрос<textarea rows="3" placeholder="Коротко опишите ситуацию"></textarea></label>
+    <button class="btn btn-gold" type="submit">Отправить вопрос</button>
+  </form>
+</div></section>
+
+<section class="rev"><div class="w">
+  <h2>Отзывы</h2>
+  <div class="grid">
+    <div><div class="stars">★★★★★</div>Пришла с вопросом про переезд — расклад помог спокойно всё взвесить. Очень бережно и без запугивания.<small>Пример отзыва</small></div>
+    <div><div class="stars">★★★★★</div>Подробная расшифровка с фото карт, ответила в тот же вечер. Буду обращаться ещё.<small>Пример отзыва</small></div>
+    <div><div class="stars">★★★★★</div>Брала расклад на год — удобно, что по каждому месяцу есть подсказка.<small>Пример отзыва</small></div>
+  </div>
+</div></section>
+
+<section class="faq"><div class="w">
+  <h2>Частые вопросы</h2>
+  <details><summary>Нужно ли встречаться лично?</summary><p>Нет, все расклады проходят онлайн: ответ приходит в мессенджер текстом или голосовым.</p></details>
+  <details><summary>Как оплатить?</summary><p>Здесь таролог указывает удобный способ оплаты — например, перевод по номеру телефона или ссылка на оплату.</p></details>
+  <details><summary>Таро точно предскажет будущее?</summary><p>Таро — инструмент, который помогает посмотреть на ситуацию с разных сторон. Решения всегда остаются за вами.</p></details>
+  <details><summary>Это конфиденциально?</summary><p>Да. Ваш вопрос и расклад остаются только между нами.</p></details>
+</div></section>
+
+<footer><div class="w"><b>Вероника Лунная</b> · таролог · консультации онлайн<br>Консультации носят информационно-развлекательный характер, 18+. Сайт-пример, все данные вымышлены.</div></footer>
+<!-- cookie-notice -->
+<div id="ck" style="display:none;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:9999;max-width:560px;margin:0 auto;background:#1d1d1b;color:#fff;border-radius:14px;padding:12px 14px;font:14px/1.45 system-ui,-apple-system,'Segoe UI',sans-serif;box-shadow:0 8px 28px rgba(0,0,0,.25);align-items:center;gap:12px">
+<span style="flex:1">Сайт использует cookies и Яндекс Метрику для статистики посещений. <a href="../politika/" style="color:#ffd84d">Подробнее</a></span>
+<button type="button" onclick="try{localStorage.setItem('ck','1')}catch(e){};document.getElementById('ck').style.display='none'" style="font:inherit;font-weight:700;border:0;border-radius:10px;padding:8px 14px;background:#ffd84d;color:#1d1d1b;cursor:pointer">Понятно</button>
+</div>
+<script>try{if(window.self===window.top&&!localStorage.getItem('ck'))document.getElementById('ck').style.display='flex'}catch(e){if(window.self===window.top)document.getElementById('ck').style.display='flex'}</script>
+<!-- /cookie-notice -->
+</body>
+</html>
