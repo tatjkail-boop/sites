@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>«Сахарная вишня» — торты на заказ · бенто, капкейки, пряники</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff8f3;--bg2:#fdeee6;--card:#fff;--ink:#3a1f24;--muted:#7d6064;--berry:#b8324f;--berry-d:#962640;--cream:#f6d9c8;--line:#f0dcd2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Manrope',system-ui,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+.demo{background:#3a1f24;color:#fbe9df;font-size:13px;text-align:center;padding:8px 16px}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,248,243,.93);backdrop-filter:blur(8px);z-index:5}
+header.top .w{display:flex;justify-content:space-between;align-items:center;height:64px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:20px}
+.logo i{width:36px;height:36px;border-radius:50%;background:var(--berry);display:grid;place-items:center;color:#fff;font-style:normal;font-size:17px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;padding:15px 24px;border-radius:999px;border:0;cursor:pointer;font-size:16px;font-family:inherit}
+.btn-berry{background:var(--berry);color:#fff}.btn-berry:hover{background:var(--berry-d)}
+.btn-line{border:1.5px solid var(--berry);color:var(--berry);background:transparent}
+.hero{padding:60px 0 70px;background:radial-gradient(ellipse at 85% 25%,#ffe1d3,transparent 55%)}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.k{color:var(--berry);font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:700}
+h1{font-size:clamp(34px,5.4vw,56px);line-height:1.08;margin-bottom:18px}
+h1 em{font-style:italic;color:var(--berry)}
+.hero p{font-size:18px;color:var(--muted);margin-bottom:22px;max-width:540px}
+.pts{list-style:none;display:grid;gap:10px;margin-bottom:28px;font-weight:600}
+.pts li:before{content:"❄";color:var(--berry);margin-right:10px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.art{max-width:100%;display:grid;place-items:center}
+.art svg{width:100%;max-width:420px;height:auto}
+section{padding:66px 0}
+h2{font-size:clamp(28px,3.8vw,40px);margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.s{border:1px solid var(--line);border-radius:22px;padding:24px;background:var(--card)}
+.s .ic{width:54px;height:54px;border-radius:16px;background:var(--bg2);display:grid;place-items:center;font-size:26px;margin-bottom:12px}
+.s h3{font-size:21px;margin-bottom:6px}
+.s p{color:var(--muted);font-size:15px;margin-bottom:12px}
+.s .pr{font-weight:800;color:var(--berry);font-size:18px}
+.ny{background:var(--bg2)}
+.fl{display:flex;flex-wrap:wrap;gap:10px}
+.fl span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 16px;font-weight:600}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.st div{background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px}
+.st b{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--berry);color:#fff;margin-bottom:12px;font-family:'Playfair Display',serif;font-size:20px}
+.st h3{font-size:20px;margin-bottom:6px}.st p{color:var(--muted)}
+.book{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+form{background:#fff;border:1px solid var(--line);border-radius:22px;padding:26px;display:grid;gap:14px}
+label{font-weight:700;font-size:14px;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
+.rev .grid>div{border:1px solid var(--line);border-radius:22px;padding:24px;background:#fff}
+.rev .stars{color:#e3a32c;margin-bottom:8px}
+.rev small{color:var(--muted);display:block;margin-top:10px}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{color:var(--muted);margin-top:8px}
+footer{background:#3a1f24;color:#e9cfc6;padding:32px 0;font-size:14px}
+footer b{color:#fff}
+header.top .btn{white-space:nowrap}
+@media(max-width:480px){.logo{font-size:17px}.logo i{width:30px;height:30px;font-size:14px}header.top .btn{padding:9px 14px!important;font-size:13px!important}}
+@media(max-width:860px){.hero .w,.book{grid-template-columns:1fr}.grid,.st{grid-template-columns:1fr}.art svg{max-width:320px}}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=114105889','ym');ym(114105889,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114105889" style="position:absolute;left:-9999px;" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+<div class="demo">Пример сайта для кондитера · название, цены и отзывы вымышлены · подготовила Татьяна Кайль-Панарат</div>
+<header class="top"><div class="w">
+  <div class="logo"><i>🍒</i>Сахарная вишня</div>
+  <a class="btn btn-berry" href="#order" style="padding:10px 18px;font-size:14px">Заказать торт</a>
+</div></header>
+
+<section class="hero"><div class="w">
+  <div>
+    <div class="k">Домашняя кондитерская · торты на заказ</div>
+    <h1>Торт к Новому году — <em>забронируйте дату</em> заранее</h1>
+    <p>Бенто-торты, праздничные торты, капкейки и имбирные пряники ручной работы. Натуральные сливки, без маргарина и заменителей. Предзаказ на декабрь уже открыт.</p>
+    <ul class="pts"><li>Новогодний дизайн по вашей идее или из каталога</li><li>Самовывоз или доставка в удобное время</li><li>Предоплата 30% — дата закрепляется за вами</li></ul>
+    <div class="cta"><a class="btn btn-berry" href="#order">Забронировать дату</a><a class="btn btn-line" href="#menu">Смотреть цены</a></div>
+  </div>
+  <div class="art" aria-hidden="true">
+    <svg viewBox="0 0 420 380">
+      <ellipse cx="210" cy="352" rx="170" ry="16" fill="#f0d6c9"/>
+      <rect x="70" y="210" width="280" height="120" rx="18" fill="#f6d9c8"/>
+      <rect x="70" y="210" width="280" height="34" rx="16" fill="#fff"/>
+      <path d="M70 236c20 18 30 18 46 0s30 18 46 0 30 18 46 0 30 18 46 0 30 18 46 0 30 18 46 0" stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round"/>
+      <rect x="112" y="118" width="196" height="96" rx="16" fill="#b8324f"/>
+      <rect x="112" y="118" width="196" height="26" rx="13" fill="#fff"/>
+      <path d="M112 138c14 14 24 14 33 0s24 14 33 0 24 14 33 0 24 14 33 0 24 14 33 0 24 14 33 0" stroke="#fff" stroke-width="11" fill="none" stroke-linecap="round"/>
+      <circle cx="170" cy="104" r="15" fill="#8e1d36"/><path d="M170 89c4-14 12-20 22-22" stroke="#4d7a4a" stroke-width="3" fill="none"/>
+      <circle cx="250" cy="104" r="15" fill="#8e1d36"/><path d="M250 89c-4-14-12-20-22-22" stroke="#4d7a4a" stroke-width="3" fill="none"/>
+      <path d="M210 40l7 14 15 2-11 10 3 15-14-7-14 7 3-15-11-10 15-2z" fill="#e3a32c"/>
+      <g fill="#fff" opacity=".9"><circle cx="150" cy="282" r="5"/><circle cx="210" cy="296" r="5"/><circle cx="270" cy="282" r="5"/><circle cx="180" cy="176" r="4"/><circle cx="240" cy="176" r="4"/></g>
+      <g stroke="#b8324f" stroke-width="2.5" opacity=".5"><path d="M50 70l10 10M60 70l-10 10M370 120l10 10M380 120l-10 10M44 170l8 8M52 170l-8 8"/></g>
+    </svg>
+  </div>
+</div></section>
+
+<section id="menu"><div class="w">
+  <h2>Что можно заказать</h2>
+  <div class="grid">
+    <div class="s"><div class="ic">🎂</div><h3>Праздничный торт</h3><p>От 1,5 кг, любой дизайн и надпись. Срок — от 3 дней.</p><div class="pr">от 2 500 ₽ / кг</div></div>
+    <div class="s"><div class="ic">🍰</div><h3>Бенто-торт</h3><p>Маленький торт на 2–3 человек в коробочке — идеальный подарок.</p><div class="pr">1 500 ₽</div></div>
+    <div class="s"><div class="ic">🧁</div><h3>Капкейки</h3><p>Набор из 6 или 9 штук, новогодний декор.</p><div class="pr">от 1 800 ₽ за 6 шт.</div></div>
+    <div class="s"><div class="ic">⭐</div><h3>Имбирные пряники</h3><p>Расписные звёзды, ёлочки и именные пряники.</p><div class="pr">от 250 ₽ / шт.</div></div>
+    <div class="s"><div class="ic">🎁</div><h3>Сладкие наборы</h3><p>Для коллег и клиентов: пряники + капкейки в подарочной коробке.</p><div class="pr">от 2 200 ₽</div></div>
+    <div class="s"><div class="ic">🍓</div><h3>Ягоды в шоколаде</h3><p>Клубника в бельгийском шоколаде, 9 или 16 ягод.</p><div class="pr">от 1 900 ₽</div></div>
+  </div>
+</div></section>
+
+<section class="ny"><div class="w">
+  <h2>Начинки</h2>
+  <div class="fl"><span>Красный бархат</span><span>Шоколад — вишня</span><span>Ванильный бисквит — клубника</span><span>Морковный с апельсином</span><span>Медовик</span><span>Сникерс</span><span>Фисташка — малина</span></div>
+</div></section>
+
+<section><div class="w">
+  <h2>Как заказать</h2>
+  <div class="st">
+    <div><b>1</b><h3>Выбираете торт</h3><p>Из каталога или присылаете картинку-идею.</p></div>
+    <div><b>2</b><h3>Бронируете дату</h3><p>Предоплата 30% — и день закреплён за вами.</p></div>
+    <div><b>3</b><h3>Забираете</h3><p>Самовывоз или доставка в удобное время.</p></div>
+  </div>
+</div></section>
+
+<section id="order" class="ny"><div class="w book">
+  <div>
+    <h2>Забронировать дату</h2>
+    <p style="color:var(--muted);font-size:18px">Декабрьские даты разбирают быстро. Оставьте заявку — я отвечу в течение часа, подскажу по весу и начинке и закреплю дату.</p>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('button').textContent='Пример формы — на настоящем сайте заявка уйдёт кондитеру'">
+    <label>Что заказать<select><option>Праздничный торт</option><option>Бенто-торт</option><option>Капкейки</option><option>Имбирные пряники</option><option>Сладкий набор</option></select></label>
+    <label>Дата<input type="date"></label>
+    <label>Ваше имя<input placeholder="Как к вам обращаться"></label>
+    <label>Телефон, MAX или Telegram<input placeholder="+7"></label>
+    <button class="btn btn-berry" type="submit">Отправить заявку</button>
+  </form>
+</div></section>
+
+<section class="rev"><div class="w">
+  <h2>Отзывы</h2>
+  <div class="grid">
+    <div><div class="stars">★★★★★</div>Заказывала бенто-торт подруге на день рождения — красивый и очень вкусный, крем не приторный.<small>Пример отзыва</small></div>
+    <div><div class="stars">★★★★★</div>Взяли наборы пряников для всей команды к Новому году — все в восторге от росписи.<small>Пример отзыва</small></div>
+    <div><div class="stars">★★★★★</div>Торт на юбилей сделали точно по картинке. Отдельное спасибо за доставку минута в минуту.<small>Пример отзыва</small></div>
+  </div>
+</div></section>
+
+<section class="faq"><div class="w">
+  <h2>Частые вопросы</h2>
+  <details><summary>За сколько дней нужно заказывать?</summary><p>Обычно за 3–5 дней. На праздничные даты в декабре лучше бронировать за 1–2 недели.</p></details>
+  <details><summary>Можно ли сделать торт по моей картинке?</summary><p>Да, присылайте идею — подскажу, что получится, и рассчитаю стоимость.</p></details>
+  <details><summary>Есть ли доставка?</summary><p>Здесь кондитер указывает районы и стоимость доставки или адрес самовывоза.</p></details>
+</div></section>
+
+<footer><div class="w"><b>Сахарная вишня</b> · домашняя кондитерская · торты на заказ<br>Сайт-пример, все данные вымышлены.</div></footer>
+<!-- cookie-notice -->
+<div id="ck" style="display:none;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:9999;max-width:560px;margin:0 auto;background:#1d1d1b;color:#fff;border-radius:14px;padding:12px 14px;font:14px/1.45 system-ui,-apple-system,'Segoe UI',sans-serif;box-shadow:0 8px 28px rgba(0,0,0,.25);align-items:center;gap:12px">
+<span style="flex:1">Сайт использует cookies и Яндекс Метрику для статистики посещений. <a href="../politika/" style="color:#ffd84d">Подробнее</a></span>
+<button type="button" onclick="try{localStorage.setItem('ck','1')}catch(e){};document.getElementById('ck').style.display='none'" style="font:inherit;font-weight:700;border:0;border-radius:10px;padding:8px 14px;background:#ffd84d;color:#1d1d1b;cursor:pointer">Понятно</button>
+</div>
+<script>try{if(window.self===window.top&&!localStorage.getItem('ck'))document.getElementById('ck').style.display='flex'}catch(e){if(window.self===window.top)document.getElementById('ck').style.display='flex'}</script>
+<!-- /cookie-notice -->
+</body>
+</html>
