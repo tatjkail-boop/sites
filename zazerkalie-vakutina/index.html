@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Таро-Зазеркалье — Наталья Вакутина · расклады и обучение Таро</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#171226;--bg2:#211a36;--card:#2a2242;--ink:#f4efe6;--muted:#b9aed0;--gold:#d9b46a;--gold-d:#c29a4c;--line:rgba(217,180,106,.25)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Manrope',system-ui,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.w{max-width:1080px;margin:0 auto;padding:0 20px}
+.demo{background:#0d0a17;color:#e8dfc9;font-size:13px;text-align:center;padding:8px 16px}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(23,18,38,.92);backdrop-filter:blur(8px);z-index:5}
+header.top .w{display:flex;justify-content:space-between;align-items:center;height:64px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:19px}
+.logo i{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;color:var(--gold);font-style:normal;font-size:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;padding:15px 24px;border-radius:999px;border:0;cursor:pointer;font-size:16px;font-family:inherit}
+.btn-gold{background:var(--gold);color:#1b1428}.btn-gold:hover{background:var(--gold-d)}
+.btn-line{border:1.5px solid var(--line);color:var(--ink);background:transparent}
+.hero{padding:64px 0 72px;background:radial-gradient(ellipse at 80% 20%,rgba(217,180,106,.14),transparent 55%),radial-gradient(ellipse at 10% 90%,rgba(140,100,220,.18),transparent 50%)}
+.hero .w{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+.k{color:var(--gold);font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:700}
+h1{font-size:clamp(34px,5.4vw,56px);line-height:1.08;margin-bottom:18px}
+h1 em{font-style:italic;color:var(--gold)}
+.hero p{font-size:18px;color:var(--muted);margin-bottom:22px;max-width:540px}
+.pts{list-style:none;display:grid;gap:10px;margin-bottom:28px;font-weight:600}
+.pts li:before{content:"✦";color:var(--gold);margin-right:10px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.cards{position:relative;height:380px;max-width:100%}
+.tc{position:absolute;width:170px;height:290px;border-radius:16px;background:linear-gradient(160deg,#2f2550,#1c1530);border:1.5px solid var(--gold);box-shadow:0 30px 60px -25px rgba(0,0,0,.7);display:grid;place-items:center}
+.tc svg{width:120px;height:220px}
+.tc:nth-child(1){left:8%;top:40px;transform:rotate(-12deg)}
+.tc:nth-child(2){left:32%;top:0;z-index:2}
+.tc:nth-child(3){left:56%;top:40px;transform:rotate(12deg)}
+section{padding:68px 0}
+h2{font-size:clamp(28px,3.8vw,40px);margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.s{border:1px solid var(--line);border-radius:20px;padding:26px;background:var(--card)}
+.s .ic{font-size:28px;margin-bottom:10px}
+.s h3{font-size:21px;margin-bottom:6px}
+.s p{color:var(--muted);font-size:15px;margin-bottom:14px}
+.s .pr{font-weight:800;color:var(--gold);font-size:18px}
+.steps{background:var(--bg2)}
+.st{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.st div{border:1px solid var(--line);border-radius:20px;padding:26px}
+.st b{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1.5px solid var(--gold);color:var(--gold);margin-bottom:12px;font-family:'Playfair Display',serif;font-size:20px}
+.st h3{font-size:20px;margin-bottom:6px}.st p{color:var(--muted)}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center}
+.ava{aspect-ratio:1;max-width:320px;width:100%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#4a3a78,#1c1530 70%);border:1.5px solid var(--gold);display:grid;place-items:center;font-family:'Playfair Display',serif;font-size:72px;color:var(--gold);margin:0 auto}
+.about p{color:var(--muted);font-size:17px;margin-bottom:14px}
+.stats{display:flex;gap:28px;margin-top:10px;flex-wrap:wrap}
+.stats div{font-size:13px;color:var(--muted)}.stats strong{display:block;font-size:26px;color:var(--ink);font-family:'Playfair Display',serif}
+.book{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+form{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:26px;display:grid;gap:14px}
+label{font-weight:700;font-size:14px;display:grid;gap:6px}
+input,select,textarea{font:inherit;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:#1b1530;color:var(--ink)}
+.rev .grid>div{border:1px solid var(--line);border-radius:20px;padding:24px;background:var(--card)}
+.rev .stars{color:var(--gold);margin-bottom:8px}
+.rev small{color:var(--muted);display:block;margin-top:10px}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{color:var(--muted);margin-top:8px}
+footer{background:#0d0a17;color:var(--muted);padding:32px 0;font-size:14px}
+footer b{color:var(--ink)}
+@media(max-width:860px){.hero .w,.book,.about{grid-template-columns:1fr}.grid,.st{grid-template-columns:1fr}.cards{height:330px}.tc{width:140px;height:240px}.tc svg{width:100px;height:180px}}
+.ph{max-width:420px;width:100%;margin:0 auto;border-radius:220px 220px 24px 24px;overflow:hidden;border:1.5px solid var(--gold);box-shadow:0 40px 80px -30px rgba(0,0,0,.8);aspect-ratio:2/3}
+.ph img,.ava img,.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.ava{overflow:hidden}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.gal img{aspect-ratio:1;border-radius:20px;border:1px solid var(--line);height:auto}
+.edu{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:start}
+.edu .s ul{list-style:none;display:grid;gap:8px;color:var(--muted);margin:10px 0 18px}
+.edu .s li:before{content:"✦ ";color:var(--gold)}
+@media(max-width:860px){.edu{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}.gal img:last-child{grid-column:span 2;aspect-ratio:2/1}}
+</style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=114105889','ym');ym(114105889,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114105889" style="position:absolute;left:-9999px;" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+<div class="demo">Демо-версия сайта для Натальи Вакутиной · подготовила Татьяна Кайль-Панарат · MAX и WhatsApp: +7 981 981-28-15</div>
+<header class="top"><div class="w">
+  <div class="logo"><i>🔮</i>Таро-Зазеркалье</div>
+  <a class="btn btn-gold" href="https://t.me/natalia_vakutina" target="_blank" rel="noopener" style="padding:10px 18px;font-size:14px">Записаться</a>
+</div></header>
+
+<section class="hero"><div class="w">
+  <div>
+    <div class="k">Наталья Вакутина · таролог</div>
+    <h1>Загляните в Зазеркалье — <em>и разберитесь в отношениях</em></h1>
+    <p>Ссоры, охлаждение, измена, «эмоциональные качели» — вопрос «продолжать или отпустить?». Разберём вашу ситуацию на картах Таро бережно и честно и найдём шаги вперёд.</p>
+    <ul class="pts"><li>Экспресс-расклад по созвону — 15 минут</li><li>Отношения, кризисы, важные решения</li><li>Индивидуальное обучение Таро</li><li>Конфиденциально — о вашем вопросе знаем только мы</li></ul>
+    <div class="cta"><a class="btn btn-gold" href="https://t.me/natalia_vakutina" target="_blank" rel="noopener">Написать в Telegram</a><a class="btn btn-line" href="#price">Расклады и цены</a><a class="btn btn-line" href="#edu">Обучение</a></div>
+  </div>
+  <div class="ph"><img src="hero.jpg" alt="Наталья Вакутина с картами Таро"></div>
+</div></section>
+
+<section id="price"><div class="w">
+  <h2>Расклады</h2>
+  <div class="grid">
+    <div class="s"><div class="ic">⚡</div><h3>Экспресс-расклад</h3><p>Ответ на один вопрос — личный созвон 15 минут.</p><div class="pr">1 000 ₽</div></div>
+    <div class="s"><div class="ic">💗</div><h3>Сложные отношения</h3><p>Причины кризиса, что вас объединяет и что мешает, ближайшие и дальние перспективы пары.</p><div class="pr">цена при записи</div></div>
+    <div class="s"><div class="ic">✨</div><h3>Итоговый расклад года</h3><p>Планы на новый год, как преодолеть трудности, где поддержка и новые возможности.</p><div class="pr">цена при записи</div></div>
+    <div class="s"><div class="ic">🕯</div><h3>Святочные гадания</h3><p>Особое время для вопросов о будущем — запись открывается перед Святками.</p><div class="pr">цена при записи</div></div>
+    <div class="s"><div class="ic">🪞</div><h3>Личная консультация</h3><p>Подробный разбор вашей ситуации: чувства, мотивы, развитие событий.</p><div class="pr">цена при записи</div></div>
+    <div class="s"><div class="ic">💬</div><h3>Есть вопрос?</h3><p>Не знаете, какой расклад выбрать, — напишите, подскажу.</p><div class="pr"><a href="https://t.me/natalia_vakutina" target="_blank" rel="noopener">@natalia_vakutina →</a></div></div>
+  </div>
+</div></section>
+
+<section class="steps"><div class="w">
+  <h2>Как проходит расклад</h2>
+  <div class="st">
+    <div><b>1</b><h3>Вы пишете мне</h3><p>В Telegram — коротко о ситуации и какой расклад интересен.</p></div>
+    <div><b>2</b><h3>Договариваемся о времени</h3><p>Выбираем удобный день для созвона или консультации.</p></div>
+    <div><b>3</b><h3>Разбираем ситуацию</h3><p>Смотрим расклад вместе: что происходит, куда ведёт и какие шаги помогут.</p></div>
+  </div>
+</div></section>
+
+<section><div class="w about">
+  <div class="ava"><img src="about.jpg" alt="Наталья Вакутина"></div>
+  <div>
+    <h2>Обо мне</h2>
+    <p>Меня зовут Наталья Вакутина. Я помогаю разобраться в отношениях и найти выход из кризисных ситуаций: ссоры и конфликты в паре, измены, обесценивание, страх одиночества, когда непонятно — продолжать или отпустить.</p>
+    <p>Расклад Таро помогает увидеть ситуацию со стороны, понять свои чувства и принять решение. «У меня Таро в кармане — я всегда на связи с вами!»</p>
+    <div class="stats"><div><strong>15 мин</strong>экспресс-созвон</div><div><strong>Telegram</strong>канал «Таро-Зазеркалье»</div></div>
+  </div>
+</div></section>
+
+<section id="edu" class="steps"><div class="w edu">
+  <div>
+    <div class="k">Для тех, кто хочет читать карты сам</div>
+    <h2>Индивидуальное обучение Таро</h2>
+    <p style="color:var(--muted);font-size:17px">Учу работать с картами лично, один на один — в вашем темпе, с разбором реальных раскладов. Подойдёт и с нуля, и тем, кто уже пробовал, но «не складывается».</p>
+  </div>
+  <div class="s">
+    <h3>Что вы получите</h3>
+    <ul><li>Значения карт без зубрёжки</li><li>Основные расклады и как их трактовать</li><li>Практика на своих вопросах и вопросах близких</li><li>Поддержка в Telegram во время обучения</li></ul>
+    <div class="pr" style="margin-bottom:14px">формат и стоимость — при записи</div>
+    <a class="btn btn-gold" href="https://t.me/natalia_vakutina" target="_blank" rel="noopener">Узнать об обучении</a>
+  </div>
+</div></section>
+
+<section><div class="w">
+  <h2>Атмосфера Зазеркалья</h2>
+  <div class="gal"><img src="g1.jpg" alt="Расклад Таро" loading="lazy"><img src="g2.jpg" alt="Наталья Вакутина" loading="lazy"><img src="g3.jpg" alt="Наталья Вакутина" loading="lazy"></div>
+</div></section>
+
+<section id="book" class="steps"><div class="w book">
+  <div>
+    <h2>Записаться на расклад</h2>
+    <p style="color:var(--muted);font-size:18px">Напишите в Telegram — отвечу и подберу удобное время. В канале «Таро-Зазеркалье» — разборы ситуаций и акции.</p>
+  </div>
+  <div style="display:grid;gap:14px;align-content:start">
+    <a class="btn btn-gold" href="https://t.me/natalia_vakutina" target="_blank" rel="noopener">✈ Написать в Telegram</a>
+    <a class="btn btn-line" href="https://t.me/zazerkalie_vakutina" target="_blank" rel="noopener">🔮 Канал «Таро-Зазеркалье»</a>
+  </div>
+</div></section>
+
+<section class="faq"><div class="w">
+  <h2>Частые вопросы</h2>
+  <details><summary>Нужно ли встречаться лично?</summary><p>Нет, консультации проходят онлайн — созвон или переписка в Telegram.</p></details>
+  <details><summary>Можно ли научиться Таро с нуля?</summary><p>Да. Обучение индивидуальное: начинаем с основ и идём в вашем темпе, на реальных раскладах.</p></details>
+  <details><summary>Как оплатить?</summary><p>Способ оплаты подскажу при записи.</p></details>
+  <details><summary>Таро точно предскажет будущее?</summary><p>Таро — инструмент, который помогает посмотреть на ситуацию с разных сторон. Решения всегда остаются за вами.</p></details>
+  <details><summary>Это конфиденциально?</summary><p>Да. Ваша ситуация и расклад остаются только между нами.</p></details>
+</div></section>
+
+<footer><div class="w"><b>Таро-Зазеркалье с Натальей Вакутиной</b> · Telegram: @natalia_vakutina<br>Консультации носят информационно-развлекательный характер, 18+. Демо-версия сайта.</div></footer>
+<!-- cookie-notice -->
+<div id="ck" style="display:none;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:9999;max-width:560px;margin:0 auto;background:#1d1d1b;color:#fff;border-radius:14px;padding:12px 14px;font:14px/1.45 system-ui,-apple-system,'Segoe UI',sans-serif;box-shadow:0 8px 28px rgba(0,0,0,.25);align-items:center;gap:12px">
+<span style="flex:1">Сайт использует cookies и Яндекс Метрику для статистики посещений. <a href="../politika/" style="color:#ffd84d">Подробнее</a></span>
+<button type="button" onclick="try{localStorage.setItem('ck','1')}catch(e){};document.getElementById('ck').style.display='none'" style="font:inherit;font-weight:700;border:0;border-radius:10px;padding:8px 14px;background:#ffd84d;color:#1d1d1b;cursor:pointer">Понятно</button>
+</div>
+<script>try{if(window.self===window.top&&!localStorage.getItem('ck'))document.getElementById('ck').style.display='flex'}catch(e){if(window.self===window.top)document.getElementById('ck').style.display='flex'}</script>
+<!-- /cookie-notice -->
+</body>
+</html>
