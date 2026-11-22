@@ -28,6 +28,14 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font
 h1,h2,h3{font-family:var(--display);line-height:1.12;margin:0;text-wrap:balance}
 h2{font-size:clamp(1.5rem,3.6vw,2.2rem);margin-bottom:1.6rem}
 a{color:inherit}
+.addons{display:grid;gap:.75rem;margin-top:1rem}
+.addon{display:flex;align-items:center;gap:1rem;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1rem 1.25rem}
+.addon .ai{flex:none;width:48px;height:48px;border-radius:14px;background:var(--soft);display:grid;place-items:center;font-size:1.4rem}
+.addon div{flex:1;min-width:0}.addon b{display:block}.addon div small{color:var(--muted);font-size:.9rem;line-height:1.4;display:block}
+.addon em{font-style:normal;font-weight:800;color:var(--accent);text-align:right;white-space:nowrap}
+.addon em .per{font-weight:600;color:var(--muted);font-size:.85rem}
+.addon em small{display:block;font-weight:600;color:var(--muted);font-size:.78rem;white-space:nowrap}
+@media(max-width:560px){.addon{flex-wrap:wrap}.addon em{width:100%;text-align:left;padding-left:64px}}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;background:var(--accent);color:var(--accent-ink);text-decoration:none;border-radius:14px;padding:.95rem 1.5rem;font-weight:700;border:0;font:inherit;font-weight:700;cursor:pointer}
 .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
 .btn:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
@@ -228,6 +236,15 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
         </div>
       </div>
       <p class="note">Рекламный бюджет оплачивается отдельно, напрямую Яндексу.</p>
+
+      <h2 style="margin-top:3rem">Дополнительно</h2>
+      <div class="addons">
+        <div class="addon"><span class="ai">📱</span><div><b>QR-табличка на стойку</b><small>отзывы на Картах, сайт или запись · дизайн + файл для печати</small></div><em>500 ₽</em></div>
+        <div class="addon"><span class="ai">📊</span><div><b>Метрика + отчёт раз в месяц</b><small>кто заходил на сайт, откуда и что смотрел — простыми словами</small></div><em>500 ₽<span class="per"> / мес</span></em></div>
+        <div class="addon"><span class="ai">💬</span><div><b>Ответы на отзывы</b><small>вежливо и от вашего имени, в течение суток</small></div><em>1 000 ₽<span class="per"> / мес</span></em></div>
+        <div class="addon"><span class="ai">🎁</span><div><b>Подарочный сертификат</b><small>в стиле вашего бизнеса · PDF для печати и картинка для мессенджеров</small></div><em>3 000 ₽<small>2 000 ₽ с нашим сайтом</small></em></div>
+        <div class="addon"><span class="ai">🎄</span><div><b>Новогодний промо-пакет</b><small>акция для Карт, сторис, пост, баннер для сайта · 4 стиля</small></div><em>3 000 ₽<small>2 000 ₽ с нашим сайтом</small></em></div>
+      </div>
     </div>
   </section>
 
