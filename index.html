@@ -66,6 +66,16 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;g
 .phone-col{display:flex;flex-direction:column;align-items:center}
 
 section{padding-block:clamp(2.5rem,6vw,4.5rem)}
+.work{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:clamp(1.25rem,4vw,2.5rem);align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(1rem,3vw,1.75rem)}
+.work .shot{position:relative;min-width:0}
+.work .shot img{display:block;width:100%;border-radius:14px;box-shadow:0 20px 40px -24px rgba(23,20,43,.6)}
+.work .shot .m{position:absolute;right:-6px;bottom:-14px;width:26%;border-radius:16px;border:5px solid #17142b}
+.work h3{font-size:1.25rem;margin:0 0 .5rem}
+.work p{color:var(--muted);margin:0 0 1rem}
+.work ul{margin:0 0 1.2rem;padding-left:1.1rem;color:var(--muted)}
+.work .btn-link{display:inline-block;background:var(--accent);color:var(--accent-ink);padding:.75rem 1.25rem;border-radius:999px;font-weight:700;text-decoration:none}
+@media(max-width:760px){.work{grid-template-columns:1fr}.work .shot{margin-bottom:14px}.work .shot .m{width:30%}}
+
 .steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1.25rem;counter-reset:s}
 .steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:1.4rem}
 .steps li::before{content:counter(s);display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--accent);color:var(--accent-ink);font-family:var(--display);font-weight:700;margin-bottom:.9rem}
@@ -142,8 +152,8 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
     <div class="wrap">
       <div>
         <span class="eyebrow">Для малого бизнеса с карточкой на Яндекс Картах</span>
-        <h1>Покажу сайт вашего бизнеса <mark>до оплаты</mark></h1>
-        <p class="lead">Беру вашу карточку на Яндекс Картах — услуги или товары, цены, фото, отзывы — и собираю по ней готовый сайт. Понравится — запускаю на вашем адресе и настраиваю рекламу в Яндексе. Не понравится — вы ничего не платите.</p>
+        <h1>Покажу сайт Вашего бизнеса <mark>до оплаты</mark></h1>
+        <p class="lead">Беру Вашу карточку на Яндекс Картах — услуги или товары, цены, фото, отзывы — и собираю по ней готовый сайт. Понравится — запускаю на Вашем адресе и настраиваю рекламу в Яндексе. Не понравится — Вы ничего не платите.</p>
         <div class="actions">
           <a class="btn" href="https://wa.me/79819812815?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%A2%D0%B0%D1%82%D1%8C%D1%8F%D0%BD%D0%B0!%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%B4%D0%B5%D0%BC%D0%BE-%D1%81%D0%B0%D0%B9%D1%82%20%D0%B4%D0%BB%D1%8F%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0%3A%20" target="_blank" rel="noopener">Хочу демо своего сайта</a>
           <a class="btn ghost" href="#price">Цены</a>
@@ -161,9 +171,9 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
     <div class="wrap">
       <h2>Как это работает</h2>
       <ol class="steps">
-        <li><h3>Собираю демо</h3><p>По вашей карточке на Яндекс Картах делаю сайт с вашими ценами, фото и отзывами. Присылаю ссылку.</p></li>
+        <li><h3>Собираю демо</h3><p>По Вашей карточке на Яндекс Картах делаю сайт с Вашими ценами, фото и отзывами. Присылаю ссылку.</p></li>
         <li><h3>Вы смотрите и правите</h3><p>Открываете с телефона, говорите, что поменять. Платите, только когда сайт нравится.</p></li>
-        <li><h3>Запускаю и привожу клиентов</h3><p>Сайт работает на вашем адресе, ссылка стоит в карточке на Картах. По желанию — реклама в Яндекс Директе.</p></li>
+        <li><h3>Запускаю и привожу клиентов</h3><p>Сайт работает на Вашем адресе, ссылка стоит в карточке на Картах. По желанию — реклама в Яндекс Директе.</p></li>
       </ol>
     </div>
   </section>
@@ -172,7 +182,22 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
     <div class="wrap">
       <h2>С кем работаю</h2>
       <div class="tools niches"><span>Салоны красоты и мастера</span><span>Кондитерские и пекарни</span><span>Кафе и доставка еды</span><span>Ремонт и строительство</span><span>Автосервисы</span><span>Мастера на дом</span><span>Фитнес и танцы</span><span>Репетиторы и курсы</span><span>Медицина и стоматология</span></div>
-      <p class="note">Ваша сфера не в списке? Если у вас есть карточка на Яндекс Картах — напишите, соберу демо.</p>
+      <p class="note">Ваша сфера не в списке? Если у Вас есть карточка на Яндекс Картах — напишите, соберу демо.</p>
+    </div>
+  </section>
+
+  <section id="works" style="padding-top:0">
+    <div class="wrap">
+      <h2>Наши работы</h2>
+      <div class="work">
+        <div class="shot"><img src="works/zazerkalie-vakutina.jpg" alt="Сайт «Таро-Зазеркалье» на компьютере" loading="lazy"><img class="m" src="works/zazerkalie-vakutina-m.jpg" alt="Сайт «Таро-Зазеркалье» на телефоне" loading="lazy"></div>
+        <div>
+          <h3>«Таро-Зазеркалье» — Наталья Вакутина</h3>
+          <p>Таролог и практический психолог. Сайт с ценами, записью в Telegram и MAX, отзывами клиентов и галереей в едином стиле.</p>
+          <ul><li>Готово за 2 дня</li><li>Правки по пожеланиям клиента — бесплатно</li><li>Политика конфиденциальности и реквизиты</li></ul>
+          <a class="btn-link" href="zazerkalie-vakutina/" target="_blank" rel="noopener">Посмотреть сайт →</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -183,13 +208,13 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
         <div class="plan">
           <h3>Старт</h3>
           <div class="price">7 000 ₽</div>
-          <ul><li>Сайт по демо с вашими правками</li><li>Услуги или товары, цены, фото, отзывы</li><li>Заявка или запись через WhatsApp, звонок в один тап</li><li>Готов за 1–2 дня</li></ul>
+          <ul><li>Сайт по демо с Вашими правками</li><li>Услуги или товары, цены, фото, отзывы</li><li>Заявка или запись через WhatsApp, звонок в один тап</li><li>Готов за 1–2 дня</li></ul>
         </div>
         <div class="plan main">
           <span class="tag">Выбирают чаще всего</span>
           <h3>Стандарт</h3>
           <div class="price">12 000 ₽</div>
-          <ul><li>Всё из «Старта»</li><li>Подключение вашего домена (регистрирует и оплачивает клиент у регистратора) и замочек https</li><li>Ссылка на сайт в карточке Яндекс Карт</li><li>Подключение к Яндекс Вебмастеру</li><li>Готов за 2–3 дня</li></ul>
+          <ul><li>Всё из «Старта»</li><li>Подключение Вашего домена (регистрирует и оплачивает клиент у регистратора) и замочек https</li><li>Ссылка на сайт в карточке Яндекс Карт</li><li>Подключение к Яндекс Вебмастеру</li><li>Готов за 2–3 дня</li></ul>
         </div>
         <div class="plan">
           <h3>Под ключ</h3>
@@ -198,7 +223,7 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
         </div>
       </div>
       <p class="note">Домен оплачивается отдельно, обычно 200–900 ₽ в год. Мелкие правки 2 недели после запуска — бесплатно. Сопровождение: обновление цен, акций и фото — 1 500 ₽ в месяц.</p>
-      <p class="note"><b>Сайт на Тильде на вашем аккаунте — от 19 000 ₽.</b> Цены, фото и тексты меняете сами, без программиста: в комплекте пошаговая памятка со скриншотами вашего сайта и ответы на вопросы 2 недели после запуска. Тариф Тильды оплачивается отдельно.</p>
+      <p class="note"><b>Сайт на Тильде на Вашем аккаунте — от 19 000 ₽.</b> Цены, фото и тексты меняете сами, без программиста: в комплекте пошаговая памятка со скриншотами Вашего сайта и ответы на вопросы 2 недели после запуска. Тариф Тильды оплачивается отдельно.</p>
 
       <h2 style="margin-top:3rem">Реклама в Яндексе</h2>
       <div class="plans">
@@ -221,7 +246,7 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
       <div class="extra">
         <div class="card">
           <h3>Пакет «Сайт + Директ»</h3>
-          <p>Сайт «Стандарт» и настройка рекламы в Яндексе — около недели, и к вам начинают приходить клиенты из поиска.</p>
+          <p>Сайт «Стандарт» и настройка рекламы в Яндексе — около недели, и к Вам начинают приходить клиенты из поиска.</p>
           <p class="p">29 000 ₽ вместо 32 000 ₽</p>
         </div>
         <div class="card">
@@ -231,7 +256,7 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
         </div>
         <div class="card">
           <h3>Аудит сайта</h3>
-          <p>Проверю ваш сайт (до 10 страниц) глазами клиента и рекламщика: понятен ли первый экран, удобно ли с телефона, сколько шагов до заявки, настроена ли Метрика, нет ли технических ошибок. Отчёт со списком исправлений по важности — за 2 дня.</p>
+          <p>Проверю Ваш сайт (до 10 страниц) глазами клиента и рекламщика: понятен ли первый экран, удобно ли с телефона, сколько шагов до заявки, настроена ли Метрика, нет ли технических ошибок. Отчёт со списком исправлений по важности — за 2 дня.</p>
           <p class="p">3 000 ₽</p>
         </div>
       </div>
@@ -241,8 +266,8 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
       <div class="addons">
         <div class="addon"><span class="ai">📱</span><div><b>QR-табличка на стойку</b><small>отзывы на Картах, сайт или запись · дизайн + файл для печати</small></div><em>500 ₽</em></div>
         <div class="addon"><span class="ai">📊</span><div><b>Метрика + отчёт раз в месяц</b><small>кто заходил на сайт, откуда и что смотрел — простыми словами</small></div><em>500 ₽<span class="per"> / мес</span></em></div>
-        <div class="addon"><span class="ai">💬</span><div><b>Ответы на отзывы</b><small>вежливо и от вашего имени, в течение суток</small></div><em>1 000 ₽<span class="per"> / мес</span></em></div>
-        <div class="addon"><span class="ai">🎁</span><div><b>Подарочный сертификат</b><small>в стиле вашего бизнеса · PDF для печати и картинка для мессенджеров</small></div><em>3 000 ₽<small>2 000 ₽ с нашим сайтом</small></em></div>
+        <div class="addon"><span class="ai">💬</span><div><b>Ответы на отзывы</b><small>вежливо и от Вашего имени, в течение суток</small></div><em>1 000 ₽<span class="per"> / мес</span></em></div>
+        <div class="addon"><span class="ai">🎁</span><div><b>Подарочный сертификат</b><small>в стиле Вашего бизнеса · PDF для печати и картинка для мессенджеров</small></div><em>3 000 ₽<small>2 000 ₽ с нашим сайтом</small></em></div>
         <div class="addon"><span class="ai">🎄</span><div><b>Новогодний промо-пакет</b><small>акция для Карт, сторис, пост, баннер для сайта · 4 стиля</small></div><em>3 000 ₽<small>2 000 ₽ с нашим сайтом</small></em></div>
       </div>
     </div>
@@ -250,11 +275,11 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
 
   <section>
     <div class="wrap">
-      <h2>Что будет на вашем сайте</h2>
+      <h2>Что будет на Вашем сайте</h2>
       <ul class="checks">
-        <li>Понятно с первого экрана, кто вы, что делаете и где</li>
+        <li>Понятно с первого экрана, кто Вы, что делаете и где</li>
         <li>Цены и сроки — без звонка</li>
-        <li>Фото ваших работ или товаров</li>
+        <li>Фото Ваших работ или товаров</li>
         <li>Отзывы с Яндекс Карт</li>
         <li>Кнопка «Записаться» или «Заказать» на первом экране</li>
         <li>Звонок и WhatsApp в одно касание</li>
@@ -277,7 +302,7 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
         <h3 style="font-size:1.05rem;margin-bottom:.9rem">Инструменты</h3>
         <div class="tools"><span>Яндекс Директ</span><span>Яндекс Бизнес</span><span>Яндекс Метрика</span><span>Яндекс Вебмастер</span><span>Аудит сайтов</span></div>
         <h3 style="font-size:1.05rem;margin:1.6rem 0 .9rem">Работаю официально</h3>
-        <p style="color:var(--muted)">ИП: договор, счёт и акт. Демо — бесплатно. Сайт оплачивается после того, как вы его одобрили, до запуска. Для работ от 30 000 ₽ — предоплата 50%.</p>
+        <p style="color:var(--muted)">ИП: договор, счёт и акт. Демо — бесплатно. Сайт оплачивается после того, как Вы его одобрили, до запуска. Для работ от 30 000 ₽ — предоплата 50%.</p>
       </div>
     </div>
   </section>
@@ -285,9 +310,9 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
   <section>
     <div class="wrap">
       <h2>Частые вопросы</h2>
-      <details><summary>Сколько стоит демо-сайт?</summary><p>Нисколько. Демо я собираю бесплатно, чтобы вы увидели результат до оплаты.</p></details>
+      <details><summary>Сколько стоит демо-сайт?</summary><p>Нисколько. Демо я собираю бесплатно, чтобы Вы увидели результат до оплаты.</p></details>
       <details><summary>Что нужно от меня?</summary><p>Название бизнеса и город. Остальное я возьму из карточки на Яндекс Картах. Если есть свежие фото работ — пришлите, сайт будет ещё лучше.</p></details>
-      <details><summary>Сайт будет моим?</summary><p>Да. Домен оформляется на вас, а по договору сайт можно использовать без ограничений по сроку.</p></details>
+      <details><summary>Сайт будет моим?</summary><p>Да. Домен оформляется на Вас, а по договору сайт можно использовать без ограничений по сроку.</p></details>
       <details><summary>Можно потом поменять цены или фото?</summary><p>Да. Первые 2 недели после запуска — бесплатно, дальше — по подписке на сопровождение или разово.</p></details>
     </div>
   </section>
@@ -295,7 +320,7 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
   <section class="contact">
     <div class="wrap">
       <div>
-        <h2>Пришлите название бизнеса — покажу ваш сайт завтра</h2>
+        <h2>Пришлите название бизнеса — покажу Ваш сайт завтра</h2>
         <p>Отвечаю в MAX и WhatsApp. Телефон: <span class="phone-num">+7 981 981-28-15</span></p>
       </div>
       <div class="list">
