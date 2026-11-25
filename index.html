@@ -135,6 +135,10 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
   .phone{width:min(100%,260px)}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.film{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:2.5rem;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:1.6rem}
+.film video{width:100%;height:auto;aspect-ratio:9/16;border-radius:18px;background:#000;display:block}
+.film p{color:var(--muted)}
+@media(max-width:720px){.film{grid-template-columns:1fr;gap:1.4rem;padding:1.1rem}.film video{max-width:320px;margin:0 auto}}
 </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=114105889','ym');ym(114105889,'init',{ssr:true,webvisor:true,clickmap:true,accurateTrackBounce:true,trackLinks:true});</script>
@@ -206,6 +210,22 @@ footer.foot{padding-block:1.5rem;color:var(--muted);font-size:.85rem}
       <h2>С кем работаю</h2>
       <div class="tools niches"><span>Салоны красоты и мастера</span><span>Кондитерские и пекарни</span><span>Кафе и доставка еды</span><span>Ремонт и строительство</span><span>Автосервисы</span><span>Мастера на дом</span><span>Фитнес и танцы</span><span>Репетиторы и курсы</span><span>Медицина и стоматология</span></div>
       <p class="note">Ваша сфера не в списке? Если у Вас есть карточка на Яндекс Картах — напишите, соберу демо.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="film">
+        <video controls playsinline preload="none" poster="media/mult-sait-poster.jpg" width="720" height="1280">
+          <source src="media/mult-sait.mp4" type="video/mp4">
+        </video>
+        <div>
+          <span class="eyebrow">Мультфильм · 1,5 минуты</span>
+          <h2>Узнали себя?</h2>
+          <p>Телефон молчит, клиенты ищут в интернете — и не находят. Знакомый сайт пообещал, а сам пропал. Короткая история о том, как это исправить за 2 дня.</p>
+          <a class="btn" href="#price">Сколько стоит сайт</a>
+        </div>
+      </div>
     </div>
   </section>
 
