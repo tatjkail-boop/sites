@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>«Сытный двор» — пельмени, вареники и полуфабрикаты от производителя</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf7f0;--bg2:#f3eadb;--card:#fff;--ink:#2b2118;--muted:#6f6254;--accent:#b5482a;--accent-d:#963a21;--green:#4f6b3a;--line:#e8dcc8}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Manrope',system-ui,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.w{max-width:1100px;margin:0 auto;padding:0 20px}
+.demo{background:#2b2118;color:#f3e6d2;font-size:13px;text-align:center;padding:8px 16px}
+header.top{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(251,247,240,.94);backdrop-filter:blur(8px);z-index:5}
+header.top .w{display:flex;justify-content:space-between;align-items:center;height:64px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Lora',Georgia,serif;font-weight:700;font-size:21px}
+.logo i{width:38px;height:38px;border-radius:50%;background:var(--accent);display:grid;place-items:center;color:#fff;font-style:normal;font-size:18px}
+nav a{margin-left:22px;font-weight:600;color:var(--muted)}nav a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;padding:15px 24px;border-radius:999px;border:0;cursor:pointer;font-size:16px;font-family:inherit}
+.btn-a{background:var(--accent);color:#fff}.btn-a:hover{background:var(--accent-d)}
+.btn-line{border:1.5px solid var(--accent);color:var(--accent);background:transparent}
+.hero{padding:60px 0 70px;background:radial-gradient(ellipse at 85% 30%,#f6dcc6,transparent 55%)}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.k{color:var(--accent);font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+h1,h2,h3{font-family:'Lora',Georgia,serif;font-weight:700}
+h1{font-size:clamp(34px,5.2vw,54px);line-height:1.1;margin-bottom:18px;text-wrap:balance}
+h1 em{font-style:italic;color:var(--accent)}
+.hero p{font-size:18px;color:var(--muted);margin-bottom:22px;max-width:540px}
+.pts{list-style:none;display:grid;gap:10px;margin-bottom:28px;font-weight:600}
+.pts li:before{content:"✓";color:var(--green);font-weight:800;margin-right:10px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.art svg{width:100%;max-width:440px;height:auto;display:block;margin:0 auto}
+section{padding:66px 0}
+h2{font-size:clamp(28px,3.8vw,40px);margin-bottom:10px;text-wrap:balance}
+.sub{color:var(--muted);margin-bottom:30px;max-width:640px}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.tabs button{font:inherit;font-weight:700;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;cursor:pointer;color:var(--ink)}
+.tabs button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.p{border:1px solid var(--line);border-radius:22px;background:var(--card);overflow:hidden;display:flex;flex-direction:column}
+.p .pic{aspect-ratio:4/3;background:var(--bg2);display:grid;place-items:center;font-size:64px}
+.p .b{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
+.p h3{font-size:20px}
+.p .m{color:var(--muted);font-size:14px}
+.p .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:10px}
+.p .pr{font-weight:800;font-size:19px;color:var(--accent)}
+.p .w8{font-size:13px;color:var(--muted)}
+.tag{display:inline-block;font-size:12px;font-weight:700;background:#eef2e7;color:var(--green);border-radius:999px;padding:3px 10px;width:max-content}
+.alt{background:var(--bg2)}
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.why div{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px}
+.why .ic{font-size:30px;margin-bottom:8px}
+.why h3{font-size:18px;margin-bottom:4px}.why p{color:var(--muted);font-size:15px}
+.opt{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.opt ul{list-style:none;display:grid;gap:10px;margin:18px 0 24px}
+.opt li:before{content:"→";color:var(--accent);font-weight:800;margin-right:10px}
+.box{background:var(--ink);color:#f3e6d2;border-radius:24px;padding:28px}
+.box b{font-family:'Lora',serif;font-size:34px;color:#fff;display:block}
+.box p{margin-bottom:16px}
+.del{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.del div{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px}
+.del h3{font-size:19px;margin-bottom:4px}.del p{color:var(--muted)}
+.faq details{border-bottom:1px solid var(--line);padding:18px 0}
+.faq summary{font-weight:700;cursor:pointer}
+.faq p{color:var(--muted);margin-top:8px}
+.contact{background:var(--accent);color:#fff;text-align:center}
+.contact h2{color:#fff}.contact p{opacity:.9;margin-bottom:24px}
+.contact .btn{background:#fff;color:var(--accent)}
+footer{background:#2b2118;color:#d9cbb6;padding:28px 0;font-size:14px}
+footer b{color:#fff}
+@media(max-width:900px){nav{display:none}.hero .w,.opt{grid-template-columns:1fr}.grid,.del{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr 1fr}.art svg{max-width:320px}}
+@media(max-width:560px){.grid,.del,.why{grid-template-columns:1fr}.logo{font-size:18px}header.top .btn{padding:9px 14px!important;font-size:13px!important}}
+</style>
+</head>
+<body>
+<div class="demo">Пример сайта для производства полуфабрикатов · название и цены вымышлены · подготовила Татьяна Кайль-Панарат</div>
+<header class="top"><div class="w">
+  <div class="logo"><i>🥟</i>Сытный двор</div>
+  <nav><a href="#catalog">Продукция</a><a href="#opt">Оптом</a><a href="#delivery">Доставка</a></nav>
+  <a class="btn btn-a" href="#contact" style="padding:10px 18px;font-size:14px">Заказать</a>
+</div></header>
+
+<section class="hero"><div class="w">
+  <div>
+    <div class="k">Производство полуфабрикатов</div>
+    <h1>Пельмени и вареники — <em>как домашние</em>, только без хлопот</h1>
+    <p>Лепим на собственном производстве из охлаждённого мяса и свежих овощей. Замораживаем сразу — вкус сохраняется до последней пельмешки.</p>
+    <ul class="pts">
+      <li>Натуральный состав, без сои и усилителей вкуса</li>
+      <li>Аппаратная лепка — одинаковое качество каждой партии</li>
+      <li>Продаём в розницу, оптом — для магазинов, кафе, столовых</li>
+    </ul>
+    <div class="cta">
+      <a class="btn btn-a" href="#catalog">Смотреть продукцию</a>
+      <a class="btn btn-line" href="#opt">Оптовый прайс</a>
+    </div>
+  </div>
+  <div class="art">
+    <svg viewBox="0 0 440 400" xmlns="http://www.w3.org/2000/svg" aria-label="Тарелка пельменей">
+      <ellipse cx="220" cy="230" rx="200" ry="150" fill="#e8d6bd"/>
+      <ellipse cx="220" cy="220" rx="170" ry="125" fill="#fff"/>
+      <ellipse cx="220" cy="220" rx="140" ry="100" fill="#f7efe3"/>
+      <g fill="#fbf3e2" stroke="#d8c19d" stroke-width="3">
+        <path d="M120 210c0-30 30-48 60-48s60 18 60 48c-20 12-100 12-120 0z"/>
+        <path d="M200 175c0-30 30-48 60-48s60 18 60 48c-20 12-100 12-120 0z"/>
+        <path d="M210 250c0-30 30-48 60-48s60 18 60 48c-20 12-100 12-120 0z"/>
+        <path d="M130 265c0-28 28-44 55-44s55 16 55 44c-18 11-92 11-110 0z"/>
+      </g>
+      <g fill="#4f6b3a"><circle cx="180" cy="170" r="5"/><circle cx="300" cy="225" r="5"/><circle cx="240" cy="280" r="4"/><circle cx="150" cy="240" r="4"/></g>
+      <path d="M330 120c30-20 60-10 70 10" stroke="#e8d6bd" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M100 110c-10-25 5-45 25-50" stroke="#e8d6bd" stroke-width="6" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+</div></section>
+
+<section id="catalog"><div class="w">
+  <h2>Наша продукция</h2>
+  <p class="sub">Вся продукция замороженная, в удобной фасовке. Цены указаны в рознице — для оптовых покупателей отдельный прайс.</p>
+  <div class="tabs" role="tablist">
+    <button class="on" data-f="all">Всё</button>
+    <button data-f="pel">Пельмени</button>
+    <button data-f="var">Вареники</button>
+    <button data-f="kot">Котлеты и фарш</button>
+    <button data-f="other">Чебуреки и соленья</button>
+  </div>
+  <div class="grid" id="items">
+    <div class="p" data-c="pel"><div class="pic">🥟</div><div class="b"><span class="tag">Хит продаж</span><h3>Пельмени «Домашние»</h3><div class="m">Свинина и говядина, тонкое тесто</div><div class="row"><span class="pr">450 ₽</span><span class="w8">1 кг</span></div></div></div>
+    <div class="p" data-c="pel"><div class="pic">🥟</div><div class="b"><h3>Пельмени «Сибирские»</h3><div class="m">Говядина, лук, чёрный перец</div><div class="row"><span class="pr">490 ₽</span><span class="w8">1 кг</span></div></div></div>
+    <div class="p" data-c="var"><div class="pic">🥔</div><div class="b"><h3>Вареники с картофелем</h3><div class="m">Картофель, жареный лук</div><div class="row"><span class="pr">320 ₽</span><span class="w8">1 кг</span></div></div></div>
+    <div class="p" data-c="var"><div class="pic">🥬</div><div class="b"><h3>Вареники с капустой</h3><div class="m">Тушёная капуста, морковь</div><div class="row"><span class="pr">310 ₽</span><span class="w8">1 кг</span></div></div></div>
+    <div class="p" data-c="var"><div class="pic">🍒</div><div class="b"><span class="tag">Сезонные</span><h3>Вареники с вишней</h3><div class="m">Вишня без косточки</div><div class="row"><span class="pr">390 ₽</span><span class="w8">1 кг</span></div></div></div>
+    <div class="p" data-c="kot"><div class="pic">🍖</div><div class="b"><h3>Котлеты «Домашние»</h3><div class="m">Свинина и говядина, панировка</div><div class="row"><span class="pr">420 ₽</span><span class="w8">1 кг</span></div></div></div>
+    <div class="p" data-c="kot"><div class="pic">🥩</div><div class="b"><h3>Фарш домашний</h3><div class="m">Свинина и говядина 50/50</div><div class="row"><span class="pr">390 ₽</span><span class="w8">1 кг</span></div></div></div>
+    <div class="p" data-c="other"><div class="pic">🫓</div><div class="b"><h3>Чебуреки с мясом</h3><div class="m">Хрустящее тесто, сочная начинка</div><div class="row"><span class="pr">380 ₽</span><span class="w8">1 кг</span></div></div></div>
+    <div class="p" data-c="other"><div class="pic">🥗</div><div class="b"><h3>Капуста квашеная</h3><div class="m">С морковью, по домашнему рецепту</div><div class="row"><span class="pr">180 ₽</span><span class="w8">1 кг</span></div></div></div>
+  </div>
+</div></section>
+
+<section class="alt"><div class="w">
+  <h2>Почему выбирают нас</h2>
+  <p class="sub">Своё производство — значит, мы отвечаем за каждый этап: от мяса до упаковки.</p>
+  <div class="why">
+    <div><div class="ic">🥩</div><h3>Охлаждённое мясо</h3><p>Работаем с проверенными фермерскими поставщиками.</p></div>
+    <div><div class="ic">⚙️</div><h3>Аппаратное производство</h3><p>Ровная лепка, одинаковый вес и качество каждой партии.</p></div>
+    <div><div class="ic">❄️</div><h3>Шоковая заморозка</h3><p>Сохраняет вкус и сочность — не слипаются в пачке.</p></div>
+    <div><div class="ic">📋</div><h3>Все документы</h3><p>Декларации соответствия, маркировка, сроки годности.</p></div>
+  </div>
+</div></section>
+
+<section id="opt"><div class="w opt">
+  <div>
+    <h2>Для магазинов, кафе и столовых</h2>
+    <p class="sub" style="margin-bottom:0">Поставляем полуфабрикаты оптом — стабильно, по графику, с документами.</p>
+    <ul>
+      <li>Оптовые цены от 20 кг</li>
+      <li>Фасовка под Ваш формат: 0,5 кг, 1 кг, весовая</li>
+      <li>Доставка своим транспортом в рефрижераторе</li>
+      <li>Возможна продукция под Вашей маркой</li>
+    </ul>
+    <a class="btn btn-a" href="#contact">Получить оптовый прайс</a>
+  </div>
+  <div class="box">
+    <p>Минимальный заказ для опта</p>
+    <b>от 20 кг</b>
+    <p style="margin-top:16px;margin-bottom:0">Пробную партию привезём со скидкой — оцените качество до договора.</p>
+  </div>
+</div></section>
+
+<section id="delivery" class="alt"><div class="w">
+  <h2>Доставка и самовывоз</h2>
+  <p class="sub">Привезём замороженными — в термосумке или рефрижераторе.</p>
+  <div class="del">
+    <div><h3>🚚 Доставка по городу</h3><p>Бесплатно от 2 000 ₽. В день заказа или на следующий день.</p></div>
+    <div><h3>🏭 Самовывоз</h3><p>С производства, ежедневно с 9:00 до 18:00.</p></div>
+    <div><h3>📦 Оптовые поставки</h3><p>По графику, 2–3 раза в неделю, с документами.</p></div>
+  </div>
+</div></section>
+
+<section class="faq"><div class="w" style="max-width:780px">
+  <h2>Частые вопросы</h2>
+  <details><summary>Сколько хранится продукция?</summary><p>При −18 °C пельмени и вареники хранятся до 3 месяцев, котлеты и фарш — до 2 месяцев. Дата производства указана на каждой упаковке.</p></details>
+  <details><summary>Есть ли продукция без свинины?</summary><p>Да, пельмени «Сибирские» — из говядины. По запросу делаем партии под заказ.</p></details>
+  <details><summary>Как сделать заказ?</summary><p>Напишите нам в MAX или WhatsApp, либо позвоните — подтвердим заказ и время доставки.</p></details>
+</div></section>
+
+<section id="contact" class="contact"><div class="w">
+  <h2>Закажите вкусный ужин на неделю</h2>
+  <p>Напишите — ответим в течение 15 минут в рабочее время.</p>
+  <div class="cta" style="justify-content:center">
+    <a class="btn" href="#">Написать в MAX</a>
+    <a class="btn" href="#">Написать в WhatsApp</a>
+  </div>
+  <p style="margin-top:22px;font-size:20px;font-weight:700">+7 (900) 000-00-00</p>
+</div></section>
+
+<footer><div class="w"><b>Сытный двор</b> · производство полуфабрикатов · пример сайта, все данные вымышлены</div></footer>
+
+<script>
+document.querySelectorAll('.tabs button').forEach(function(b){b.addEventListener('click',function(){
+  document.querySelectorAll('.tabs button').forEach(function(x){x.classList.toggle('on',x===b)});
+  var f=b.getAttribute('data-f');
+  document.querySelectorAll('#items .p').forEach(function(p){p.style.display=(f==='all'||p.getAttribute('data-c')===f)?'':'none'});
+})});
+</script>
+</body>
+</html>
